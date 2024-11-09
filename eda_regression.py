@@ -25,8 +25,16 @@ combined_df.loc[(combined_df['time_diff'] >= 10) & (combined_df['time_diff'] <= 
 # Condition 2
 combined_df.loc[combined_df['arrtime'].dt.hour.isin(range(0, 6)), 'is_emergency'] = 1
 
+'''
+original condition for determining if it is an emergency
+Condition: if there is an audio recording
+'''
+
+# original condition
+combined_df["is_emergency_2"] = combined_df["recording"].apply(lambda x: 1 if pd.notnull(x) else 0)
+
 combined_df.drop(columns=['time_diff'], inplace=True)
-combined_df.to_csv("DataSets/finalised_dataset.csv", index=False)
+combined_df.to_csv("DataSets/finalised_ifEmergency_dataset.csv", index=False)
 
 print(combined_df.info())
 print(combined_df.describe())
