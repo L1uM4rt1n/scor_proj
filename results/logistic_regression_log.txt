@@ -1,0 +1,17 @@
+========== Training Log ==========
+Accuracy: 0.9801
+Confusion Matrix:
+[[716   2]
+ [ 14  72]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99       718
+           1       0.97      0.84      0.90        86
+
+    accuracy                           0.98       804
+   macro avg       0.98      0.92      0.94       804
+weighted avg       0.98      0.98      0.98       804
+
+ROC AUC: 0.9271
