@@ -1,0 +1,38 @@
+Results:
+
+========== new conditions ==========
+ROC AUC Score for is_emergency: 0.9271393405454428
+
+Model Performance for is_emergency:
+Confusion Matrix:
+[[716   2]
+ [ 14  72]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99       718
+           1       0.97      0.84      0.90        86
+
+    accuracy                           0.98       804
+   macro avg       0.98      0.92      0.94       804
+weighted avg       0.98      0.98      0.98       804
+
+
+========== original conditions ==========
+ROC AUC Score for is_emergency_2: 0.5677628889393596
+
+Model Performance for is_emergency_2:
+Confusion Matrix:
+[[629   0]
+ [175   0]]
+
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.78      1.00      0.88       629
+           1       0.00      0.00      0.00       175
+
+    accuracy                           0.78       804
+   macro avg       0.39      0.50      0.44       804
+weighted avg       0.61      0.78      0.69       804
