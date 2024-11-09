@@ -1,0 +1,281 @@
+postal_district,hospital,distance_km
+D01,Alexandra Hospital,5.42337459320809
+D01,Changi General Hospital,12.631721537116961
+D01,Jurong Community Hospital,12.873137661469055
+D01,Khoo Teck Puat Hospital,15.728938183497892
+D01,Ng Teng Fong General Hospital,12.872586220501539
+D01,National University Hospital,7.712866937052534
+D01,Sengkang General Hospital,12.82420241330559
+D01,Singapore General Hospital,1.9818735269775143
+D01,Tan Tock Seng Hospital,4.276234030176711
+D01,Woodlands Health,16.95589931169253
+D02,Alexandra Hospital,4.6504280495605945
+D02,Changi General Hospital,13.74464831993348
+D02,Jurong Community Hospital,12.362004926105161
+D02,Khoo Teck Puat Hospital,16.318272954702056
+D02,Ng Teng Fong General Hospital,12.363407962907122
+D02,National University Hospital,6.977186046561558
+D02,Sengkang General Hospital,13.767035666624661
+D02,Singapore General Hospital,0.9787775697055133
+D02,Tan Tock Seng Hospital,4.872208340525347
+D02,Woodlands Health,17.248355811214033
+D03,Alexandra Hospital,1.768046057669917
+D03,Changi General Hospital,18.769106906295466
+D03,Jurong Community Hospital,6.3718751486688054
+D03,Khoo Teck Puat Hospital,15.728863619098448
+D03,Ng Teng Fong General Hospital,6.379630069318679
+D03,National University Hospital,0.6022530988696315
+D03,Sengkang General Hospital,16.044611017097225
+D03,Singapore General Hospital,5.4650422329509984
+D03,Tan Tock Seng Hospital,7.190130622638724
+D03,Woodlands Health,14.743195906511847
+D04,Alexandra Hospital,2.7627094302194597
+D04,Changi General Hospital,16.611000740709898
+D04,Jurong Community Hospital,10.633412762221836
+D04,Khoo Teck Puat Hospital,17.3844972782614
+D04,Ng Teng Fong General Hospital,10.639871786402052
+D04,National University Hospital,4.886642558418397
+D04,Sengkang General Hospital,15.8756439338411
+D04,Singapore General Hospital,2.043125291306869
+D04,Tan Tock Seng Hospital,6.52511862996564
+D04,Woodlands Health,17.499094833338454
+D05,Alexandra Hospital,4.0710710064960045
+D05,Changi General Hospital,21.023855922303294
+D05,Jurong Community Hospital,5.028915193141336
+D05,Khoo Teck Puat Hospital,16.75701257343052
+D05,Ng Teng Fong General Hospital,5.044075833578444
+D05,National University Hospital,1.9005332209193473
+D05,Sengkang General Hospital,17.8480326880681
+D05,Singapore General Hospital,7.716195525401182
+D05,Tan Tock Seng Hospital,9.35154197802579
+D05,Woodlands Health,15.092983801019876
+D06,Alexandra Hospital,5.334020681900864
+D06,Changi General Hospital,12.336517831636542
+D06,Jurong Community Hospital,12.53924470487744
+D06,Khoo Teck Puat Hospital,15.02678028804079
+D06,Ng Teng Fong General Hospital,12.53748717152795
+D06,National University Hospital,7.563686245675058
+D06,Sengkang General Hospital,12.194776802357536
+D06,Singapore General Hospital,2.247445236127317
+D06,Tan Tock Seng Hospital,3.576723921918637
+D06,Woodlands Health,16.287016817216713
+D07,Alexandra Hospital,5.857510127377482
+D07,Changi General Hospital,11.490219198754069
+D07,Jurong Community Hospital,12.540189831037008
+D07,Khoo Teck Puat Hospital,13.964798809944304
+D07,Ng Teng Fong General Hospital,12.536108541583546
+D07,National University Hospital,7.945079801410229
+D07,Sengkang General Hospital,11.015322342241639
+D07,Singapore General Hospital,3.2864903079561487
+D07,Tan Tock Seng Hospital,2.6188275801423995
+D07,Woodlands Health,15.435930507063457
+D08,Alexandra Hospital,6.158040579727501
+D08,Changi General Hospital,11.145839474450076
+D08,Jurong Community Hospital,12.03326942692148
+D08,Khoo Teck Puat Hospital,12.52189489056066
+D08,Ng Teng Fong General Hospital,12.02652196891507
+D08,National University Hospital,7.987758099168502
+D08,Sengkang General Hospital,9.784155063966889
+D08,Singapore General Hospital,4.3646859202179
+D08,Tan Tock Seng Hospital,1.2992270513782214
+D08,Woodlands Health,14.079004980889598
+D09,Alexandra Hospital,3.655248813723603
+D09,Changi General Hospital,13.662871010182688
+D09,Jurong Community Hospital,9.954122838749521
+D09,Khoo Teck Puat Hospital,13.312151188282696
+D09,Ng Teng Fong General Hospital,9.950544123098027
+D09,National University Hospital,5.491757168978341
+D09,Sengkang General Hospital,11.755170198745414
+D09,Singapore General Hospital,2.9928216371032286
+D09,Tan Tock Seng Hospital,2.3843905700809334
+D09,Woodlands Health,13.980393397731945
+D10,Alexandra Hospital,3.0271103343330372
+D10,Changi General Hospital,15.952486447805436
+D10,Jurong Community Hospital,7.060382638709049
+D10,Khoo Teck Puat Hospital,12.559210120773626
+D10,Ng Teng Fong General Hospital,7.0557037170834755
+D10,National University Hospital,3.5243069156666924
+D10,Sengkang General Hospital,12.632952920048055
+D10,Singapore General Hospital,5.126555678629303
+D10,Tan Tock Seng Hospital,4.214483002640859
+D10,Woodlands Health,12.233902264302188
+D11,Alexandra Hospital,6.03442900619514
+D11,Changi General Hospital,12.120899200737362
+D11,Jurong Community Hospital,10.481295525952204
+D11,Khoo Teck Puat Hospital,10.735526167611745
+D11,Ng Teng Fong General Hospital,10.471402776009143
+D11,National University Hospital,7.330978523132158
+D11,Sengkang General Hospital,9.109190566330494
+D11,Singapore General Hospital,5.578784305213813
+D11,Tan Tock Seng Hospital,0.8692893067559604
+D11,Woodlands Health,11.96254348163949
+D12,Alexandra Hospital,7.932826043779842
+D12,Changi General Hospital,9.615028251692438
+D12,Jurong Community Hospital,13.055084573433964
+D12,Khoo Teck Puat Hospital,11.283312133921612
+D12,Ng Teng Fong General Hospital,13.04529824225556
+D12,National University Hospital,9.584279300909863
+D12,Sengkang General Hospital,7.918495633023881
+D12,Singapore General Hospital,6.25999104180063
+D12,Tan Tock Seng Hospital,2.1289093528271588
+D12,Woodlands Health,13.43345172921907
+D13,Alexandra Hospital,9.703058876078082
+D13,Changi General Hospital,7.831749748281641
+D13,Jurong Community Hospital,14.745368707848048
+D13,Khoo Teck Puat Hospital,11.290924724146294
+D13,Ng Teng Fong General Hospital,14.734543389960717
+D13,National University Hospital,11.38950667649764
+D13,Sengkang General Hospital,6.824876918328711
+D13,Singapore General Hospital,7.734924066506605
+D13,Tan Tock Seng Hospital,3.931535934782876
+D13,Woodlands Health,14.049805680304301
+D14,Alexandra Hospital,10.485205270832791
+D14,Changi General Hospital,6.778265527233295
+D14,Jurong Community Hospital,16.231897101623712
+D14,Khoo Teck Puat Hospital,13.053878824612536
+D14,Ng Teng Fong General Hospital,16.222840034329327
+D14,National University Hospital,12.39870610386281
+D14,Sengkang General Hospital,7.933751956360861
+D14,Singapore General Hospital,7.910048802667008
+D14,Tan Tock Seng Hospital,5.203377509029911
+D14,Woodlands Health,15.952645093983149
+D15,Alexandra Hospital,11.581105684589065
+D15,Changi General Hospital,6.426203206101146
+D15,Jurong Community Hospital,18.04371665179672
+D15,Khoo Teck Puat Hospital,15.447614948566754
+D15,Ng Teng Fong General Hospital,18.03691788733713
+D15,National University Hospital,13.699736840458113
+D15,Sengkang General Hospital,9.921681287480384
+D15,Singapore General Hospital,8.440177719573269
+D15,Tan Tock Seng Hospital,7.075159907459519
+D15,Woodlands Health,18.395242879460184
+D16,Alexandra Hospital,17.295259255040435
+D16,Changi General Hospital,2.50310880694224
+D16,Jurong Community Hospital,23.242642491705094
+D16,Khoo Teck Puat Hospital,17.382253090063458
+D16,Ng Teng Fong General Hospital,23.232912361980112
+D16,National University Hospital,19.333708312912137
+D16,Sengkang General Hospital,10.50988426942585
+D16,Singapore General Hospital,14.234838906164216
+D16,Tan Tock Seng Hospital,12.234063721870076
+D16,Woodlands Health,21.34145740776656
+D17,Alexandra Hospital,22.561760327227848
+D17,Changi General Hospital,5.343744166678059
+D17,Jurong Community Hospital,27.425405337966243
+D17,Khoo Teck Puat Hospital,18.218909681125858
+D17,Ng Teng Fong General Hospital,27.411548599195527
+D17,National University Hospital,24.367020848571702
+D17,Sengkang General Hospital,11.339285854144311
+D17,Singapore General Hospital,19.91132121789266
+D17,Tan Tock Seng Hospital,16.9216590400633
+D17,Woodlands Health,22.8902699596408
+D18,Alexandra Hospital,17.158150732532697
+D18,Changi General Hospital,1.291937467496131
+D18,Jurong Community Hospital,22.015579443625132
+D18,Khoo Teck Puat Hospital,14.164799421965684
+D18,Ng Teng Fong General Hospital,22.002366802968982
+D18,National University Hospital,18.919452436188536
+D18,Sengkang General Hospital,7.1247506035719725
+D18,Singapore General Hospital,14.681314578652012
+D18,Tan Tock Seng Hospital,11.463590837610939
+D18,Woodlands Health,18.460618044293035
+D19,Alexandra Hospital,13.769080078802887
+D19,Changi General Hospital,6.6170179656301835
+D19,Jurong Community Hospital,17.171380987190066
+D19,Khoo Teck Puat Hospital,8.819222829502632
+D19,Ng Teng Fong General Hospital,17.155258065276367
+D19,National University Hospital,15.066733138184748
+D19,Sengkang General Hospital,2.380193015427422
+D19,Singapore General Hospital,12.33913444371804
+D19,Tan Tock Seng Hospital,7.851672879467299
+D19,Woodlands Health,12.885603514777381
+D20,Alexandra Hospital,8.083510225272962
+D20,Changi General Hospital,12.182972101957244
+D20,Jurong Community Hospital,10.56403122135289
+D20,Khoo Teck Puat Hospital,8.089571082138068
+D20,Ng Teng Fong General Hospital,10.548763738638414
+D20,National University Hospital,8.839029211843446
+D20,Sengkang General Hospital,7.353316546804364
+D20,Singapore General Hospital,8.199677107572656
+D20,Tan Tock Seng Hospital,3.410715058973515
+D20,Woodlands Health,9.583615910644708
+D21,Alexandra Hospital,6.224193377571622
+D21,Changi General Hospital,19.192637236738985
+D21,Jurong Community Hospital,3.354068425229059
+D21,Khoo Teck Puat Hospital,11.830314308324574
+D21,Ng Teng Fong General Hospital,3.3392206085734326
+D21,National University Hospital,4.7712657432173815
+D21,Sengkang General Hospital,14.22640655557307
+D21,Singapore General Hospital,9.295897148676923
+D21,Tan Tock Seng Hospital,7.890562526462135
+D21,Woodlands Health,9.854072725219318
+D22,Alexandra Hospital,8.214809478150269
+D22,Changi General Hospital,22.924599601188444
+D22,Jurong Community Hospital,0.4183996022689717
+D22,Khoo Teck Puat Hospital,14.788945521125257
+D22,Ng Teng Fong General Hospital,0.43389842074480234
+D22,National University Hospital,6.018152915532447
+D22,Sengkang General Hospital,17.909401759693733
+D22,Singapore General Hospital,11.810663741883856
+D22,Tan Tock Seng Hospital,11.439609548320801
+D22,Woodlands Health,11.807480440057764
+D23,Alexandra Hospital,10.740015824949607
+D23,Changi General Hospital,20.954297321585752
+D23,Jurong Community Hospital,5.300878658155652
+D23,Khoo Teck Puat Hospital,9.84023808591236
+D23,Ng Teng Fong General Hospital,5.276145832167234
+D23,National University Hospital,9.30591190422237
+D23,Sengkang General Hospital,14.426019384005619
+D23,Singapore General Hospital,13.537580570754987
+D23,Tan Tock Seng Hospital,10.980827657631663
+D23,Woodlands Health,6.302768003245481
+D24,Alexandra Hospital,16.26621559717009
+D24,Changi General Hospital,27.277731292340782
+D24,Jurong Community Hospital,8.740466578654926
+D24,Khoo Teck Puat Hospital,14.362848939714812
+D24,Ng Teng Fong General Hospital,8.725616223749087
+D24,National University Hospital,14.345041140471015
+D24,Sengkang General Hospital,20.22158043917908
+D24,Singapore General Hospital,19.500871753442876
+D24,Tan Tock Seng Hospital,17.437860535557974
+D24,Woodlands Health,9.559238284999248
+D25,Alexandra Hospital,16.71075561429708
+D25,Changi General Hospital,21.090750234331043
+D25,Jurong Community Hospital,12.497405644977931
+D25,Khoo Teck Puat Hospital,6.109484158481091
+D25,Ng Teng Fong General Hospital,12.47270995099869
+D25,National University Hospital,15.83561143534566
+D25,Sengkang General Hospital,13.024599317916072
+D25,Singapore General Hospital,18.617981634718422
+D25,Tan Tock Seng Hospital,14.58451546858375
+D25,Woodlands Health,1.7781071848483436
+D26,Alexandra Hospital,12.618872811613656
+D26,Changi General Hospital,15.238670676397653
+D26,Jurong Community Hospital,11.49481683778411
+D26,Khoo Teck Puat Hospital,3.0856789377900795
+D26,Ng Teng Fong General Hospital,11.47190168907506
+D26,National University Hospital,12.509555105563066
+D26,Sengkang General Hospital,7.613305522642307
+D26,Singapore General Hospital,13.628831588781376
+D26,Tan Tock Seng Hospital,9.052090171740792
+D26,Woodlands Health,4.3607525590105
+D27,Alexandra Hospital,14.749089776042185
+D27,Changi General Hospital,16.052426666091193
+D27,Jurong Community Hospital,13.144796690592505
+D27,Khoo Teck Puat Hospital,1.4035088691833806
+D27,Ng Teng Fong General Hospital,13.120961975984933
+D27,National University Hospital,14.581158807749715
+D27,Sengkang General Hospital,7.948349974674551
+D27,Singapore General Hospital,15.731308362313095
+D27,Tan Tock Seng Hospital,11.072940752062344
+D27,Woodlands Health,3.6861904238465457
+D28,Alexandra Hospital,14.320979925633697
+D28,Changi General Hospital,10.394202428131107
+D28,Jurong Community Hospital,15.781625711222313
+D28,Khoo Teck Puat Hospital,4.917693956453784
+D28,Ng Teng Fong General Hospital,15.761700547242238
+D28,National University Hospital,15.053289251337024
+D28,Sengkang General Hospital,2.2573111537736525
+D28,Singapore General Hospital,13.89294488010103
+D28,Tan Tock Seng Hospital,8.940572319383339
+D28,Woodlands Health,9.30969864101162
