@@ -1,11 +1,15 @@
 print ("========== EDA of dataset ==========")
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 calls_df = pd.read_csv("DataSets/calls.csv")
 audio_df = pd.read_csv("DataSets/audio_recording.csv")
 
 combined_df = pd.merge(calls_df, audio_df, on=['iot_lora_id', 'port', 'arrtime', 'rssi', 'district', 'post_code', 'unit'], how='outer')
 combined_df.drop_duplicates(inplace=True)
+
+
 
 '''
 assumption conditions for determining if it is an emergency
