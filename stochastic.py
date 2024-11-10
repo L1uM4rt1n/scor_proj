@@ -46,7 +46,7 @@ def update_percentage_capacity(current_percentage_capacity, assigned_hospital):
     return current_percentage_capacity
 
 # Cost functions with scaling factors for balanced optimization
-NON_EMERGENCY_WEIGHT = 200
+NON_EMERGENCY_WEIGHT = 10
 DISTANCE_WEIGHT = 1
 CAPACITY_WEIGHT = 50
 
@@ -70,6 +70,7 @@ def real_time_multi_stage_optimization(emergency_data, p_threshold, max_distance
     u_i1 = {}
     u_ij2 = {}
     p_real_emergency_dict = {}  # Dictionary to store precomputed emergency probabilities
+    M = 1  # Big-M constant (adjustable if needed)
 
     # Iterate over actual time intervals (0, 2, ..., 22)
     for t in range(0, time_horizon * 2, 2):
@@ -84,12 +85,18 @@ def real_time_multi_stage_optimization(emergency_data, p_threshold, max_distance
             rssi = call['rssi']
             call_id = (iot_lora_id, call_index)
 
-            # Calculate and store the probability of an emergency
-            p_real_emergency = logistic_util.predict_probability(rssi, two_hour)
-            p_real_emergency_dict[call_id] = p_real_emergency  # Store in dictionary for reuse
+            # Calculate and store the probability of an emergency only if the incident's `two_hour` matches `t`
+            if two_hour == t:
+                p_real_emergency = logistic_util.predict_probability(rssi, two_hour)
+                p_real_emergency_dict[call_id] = p_real_emergency  # Store in dictionary for reuse
 
-            # Define decision variables
+            # Define decision variable for emergency assignment
             u_i1[call_id] = model.addVar(vtype=GRB.BINARY, name=f"u_i1_{iot_lora_id}_{call_index}_t{time_step_index}")
+
+                        # Big-M constraint: if p_real_emergency > 0.5, enforce u_i1 = 1
+            if call_id in p_real_emergency_dict:
+                p_real_emergency = p_real_emergency_dict[call_id]
+                model.addConstr(u_i1[call_id] * M >= p_real_emergency - 0.5, name=f"EmergencyAssign_{call_id}")
 
             for hospital in hospital_capacity_simulation.keys():
                 u_ij2[(call_id, hospital, time_step_index)] = model.addVar(
@@ -98,9 +105,11 @@ def real_time_multi_stage_optimization(emergency_data, p_threshold, max_distance
                 # Distance constraint
                 distances = distance_calculator.get_distances_from_postal_code(post_code)
                 distance_row = distances[distances['hospital'] == hospital]
-                if not distance_row.empty and distance_row['distance_km'].values[0] > max_distance:
-                    model.addConstr(u_ij2[(call_id, hospital, time_step_index)] == 0,
-                                    f"MaxDistance_{iot_lora_id}_{call_index}_{hospital}_t{time_step_index}")
+                if not distance_row.empty:
+                    distance_km = distance_row['distance_km'].values[0]
+                    if distance_km > max_distance:
+                        model.addConstr(u_ij2[(call_id, hospital, time_step_index)] == 0,
+                                        f"MaxDistance_{iot_lora_id}_{call_index}_{hospital}_t{time_step_index}")
 
             # Capacity constraint based on absolute values
             for hospital in hospital_capacity_simulation.keys():
@@ -111,7 +120,7 @@ def real_time_multi_stage_optimization(emergency_data, p_threshold, max_distance
                     f"Capacity_{hospital}_t{time_step_index}"
                 )
 
-            # Single assignment per emergency constraint
+            # Enforce that if `u_i1 = 1`, exactly one hospital must be assigned
             model.addConstr(
                 gp.quicksum(u_ij2[(call_id, hospital, time_step_index)]
                             for hospital in hospital_capacity_simulation.keys()) == u_i1[call_id],
@@ -119,7 +128,7 @@ def real_time_multi_stage_optimization(emergency_data, p_threshold, max_distance
             )
 
     # Objective function
-    objective_terms = []
+    objective_terms = [] 
     for t in range(0, time_horizon * 2, 2):
         time_step_index = t // 2
         for call in emergency_data:
@@ -127,16 +136,20 @@ def real_time_multi_stage_optimization(emergency_data, p_threshold, max_distance
             call_index = call['call_index']
             call_id = (iot_lora_id, call_index)
             two_hour = call['two_hour']
-            rssi = call['rssi']
 
-            # Use the precomputed probability of an emergency
-            p_real_emergency = p_real_emergency_dict[call_id]
+            # Only evaluate this call if it occurred at the current time step
+            if two_hour != t:
+                continue
+
+            # Use the precomputed probability of an emergency if available
+            p_real_emergency = p_real_emergency_dict.get(call_id, 0)
             non_emergency_cost = (1 - p_real_emergency) * u_i1[call_id] * NON_EMERGENCY_WEIGHT
+            print(call_id, p_real_emergency, t)
             objective_terms.append(non_emergency_cost)
 
             for hospital in hospital_capacity_simulation.keys():
-                post_code = call['post_code']
-                distances = distance_calculator.get_distances_from_postal_code(post_code)
+                post_area = call['post_area']
+                distances = distance_calculator.get_distances_from_postal_code(post_area)
                 distance_row = distances[distances['hospital'] == hospital]
                 if not distance_row.empty:
                     distance_km = distance_row['distance_km'].values[0]
@@ -153,11 +166,17 @@ def real_time_multi_stage_optimization(emergency_data, p_threshold, max_distance
             iot_lora_id = call['iot_lora_id']
             call_index = call['call_index']
             call_id = (iot_lora_id, call_index)
+            two_hour = call['two_hour']  # Retrieve the two-hour timing of the call
+
             for hospital in hospital_capacity_simulation.keys():
                 for t in range(0, time_horizon * 2, 2):
                     time_step_index = t // 2
-                    if u_ij2[(call_id, hospital, time_step_index)].x > 0.5:
-                        assignments[(call_id, t)] = hospital
+
+                    # Only make an assignment if the call's two-hour timing matches the current time step `t`
+                    if two_hour == t and u_ij2[(call_id, hospital, time_step_index)].x > 0.5:
+                        # Save the assignment result along with the precomputed emergency probability
+                        assignments[(call_id, t)] = (hospital, p_real_emergency_dict.get(call_id, 0))
+                        
         return assignments, model.objVal
     else:
         print("No optimal solution found.")
@@ -173,14 +192,14 @@ if __name__ == "__main__":
     emergency_data = []
 
     # Load emergency data from CSV file, limiting to the first 1000 entries
-    with open("data/pab_calls_with_recording_20241109.csv", mode='r') as file:
+    with open("data/sample-calls.csv", mode='r') as file:
         reader = csv.DictReader(file)
         for idx, row in enumerate(reader):
             if idx >= 10:  # Stop reading after 1000 entries
                 break
             
             # Parse and process `arrtime` to get the hour, rounding down to the nearest even hour
-            arrtime = datetime.strptime(row['arrtime'], "%d/%m/%Y %H:%M")
+            arrtime = datetime.strptime(row['arrtime'], "%Y-%m-%d %H:%M:%S")
             two_hour = arrtime.hour - (arrtime.hour % 2)
 
             # Append each row as a separate entry in the list with a unique call index
@@ -190,13 +209,14 @@ if __name__ == "__main__":
                 'two_hour': two_hour,
                 'post_code': row['post_code'],
                 'rssi': float(row['rssi']),
-                'district': row['district'],
-                'recording': row['recording']
+                'post_area': row['district'],
+                #'recording': row['recording']
             })
-
+    
+    print(emergency_data)
     # Run the optimization model with the list of calls
     p_threshold = 0.5
-    max_distance = 10
+    max_distance = 20
     time_horizon = 12
 
     assignments, total_cost = real_time_multi_stage_optimization(emergency_data, p_threshold, max_distance, time_horizon)
