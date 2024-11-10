@@ -12,16 +12,15 @@ class HospitalDistanceCalculator:
 
         # Approximate coordinates for hospitals in Singapore
         self.hospital_coordinates = {
-            "Alexandra Hospital": (1.2889, 103.8030),
-            "Changi General Hospital": (1.3417, 103.9491),
-            "Jurong Community Hospital": (1.3328, 103.7467),
-            "Khoo Teck Puat Hospital": (1.4244, 103.8389),
-            "Ng Teng Fong General Hospital": (1.3330, 103.7468),
-            "National University Hospital": (1.2958, 103.7832),
-            "Sengkang General Hospital": (1.3911, 103.8930),
-            "Singapore General Hospital": (1.2780, 103.8345),
-            "Tan Tock Seng Hospital": (1.3214, 103.8454),
-            "Woodlands Health": (1.4250, 103.7946)
+            "AH": (1.2889, 103.8030),
+            "CGH": (1.3417, 103.9491),
+            "KTPH": (1.4244, 103.8389),
+            "NTFGH": (1.3330, 103.7468),
+            "NUH(A)": (1.2958, 103.7832),
+            "SKH": (1.3911, 103.8930),
+            "SGH": (1.2780, 103.8345),
+            "TTSH": (1.3214, 103.8454),
+            "WH": (1.4250, 103.7946)
         }
 
     def get_midpoints(self, input_midpoint_csv):
@@ -53,7 +52,7 @@ class HospitalDistanceCalculator:
         
     def get_distances_from_postal_code(self, postal_code):
         # Convert postal code to district
-        sector = str(postal_code)[:2]
+        sector = int(str(postal_code)[:2])
         
         if not sector:
             print(f"No sector found for postal code: {postal_code}")

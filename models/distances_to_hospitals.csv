@@ -1,831 +1,748 @@
 postal_district,hospital,distance_km
-01,Alexandra Hospital,6.128172263352386
-01,Changi General Hospital,12.31938683000217
-01,Jurong Community Hospital,13.647229091164613
-01,Khoo Teck Puat Hospital,16.233907538223942
-01,Ng Teng Fong General Hospital,13.646893108857272
-01,National University Hospital,8.435406630215267
-01,Sengkang General Hospital,13.02154853000008
-01,Singapore General Hospital,2.5430045862028194
-01,Tan Tock Seng Hospital,4.84494709661645
-01,Woodlands Health,17.609359405716823
-02,Alexandra Hospital,8.27241599210479
-02,Changi General Hospital,9.898338905131064
-02,Jurong Community Hospital,15.329930316656357
-02,Khoo Teck Puat Hospital,15.668164772082898
-02,Ng Teng Fong General Hospital,15.326514017337404
-02,National University Hospital,10.501572755054376
-02,Sengkang General Hospital,11.501757143062598
-02,Singapore General Hospital,4.919834975630918
-02,Tan Tock Seng Hospital,5.083076559806141
-02,Woodlands Health,17.717275885578186
-03,Alexandra Hospital,6.227305673389078
-03,Changi General Hospital,11.393296605509857
-03,Jurong Community Hospital,13.230506364642979
-03,Khoo Teck Puat Hospital,14.776059631340896
-03,Ng Teng Fong General Hospital,13.227500943507453
-03,National University Hospital,8.41724508933987
-03,Sengkang General Hospital,11.547249473200546
-03,Singapore General Hospital,3.1782955124092367
-03,Tan Tock Seng Hospital,3.501301973677271
-03,Woodlands Health,16.3214455243573
-04,Alexandra Hospital,5.169299044688322
-04,Changi General Hospital,12.691874216256723
-04,Jurong Community Hospital,12.547245451835204
-04,Khoo Teck Puat Hospital,15.432910167352548
-04,Ng Teng Fong General Hospital,12.54639125077605
-04,National University Hospital,7.4402624406874045
-04,Sengkang General Hospital,12.651519865400013
-04,Singapore General Hospital,1.876640243217667
-04,Tan Tock Seng Hospital,3.9694926256394236
-04,Woodlands Health,16.612456727210162
-05,Alexandra Hospital,4.71378169547246
-05,Changi General Hospital,13.182700800052594
-05,Jurong Community Hospital,12.191351909092447
-05,Khoo Teck Puat Hospital,15.567156404114193
-05,Ng Teng Fong General Hospital,12.191199030199968
-05,National University Hospital,7.002377585561429
-05,Sengkang General Hospital,12.98763175583343
-05,Singapore General Hospital,1.3862803906341814
-05,Tan Tock Seng Hospital,4.107203006415994
-05,Woodlands Health,16.598822715552522
-06,Alexandra Hospital,4.972752299304279
-06,Changi General Hospital,13.202479249669668
-06,Jurong Community Hospital,12.55234404866984
-06,Khoo Teck Puat Hospital,15.973338486056692
-06,Ng Teng Fong General Hospital,12.552716235222018
-06,National University Hospital,7.283470160734551
-06,Sengkang General Hospital,13.270248198914143
-06,Singapore General Hospital,1.4280820236458354
-06,Tan Tock Seng Hospital,4.5070882886307295
-06,Woodlands Health,17.04104801728484
-07,Alexandra Hospital,4.816172315094875
-07,Changi General Hospital,13.651626080895186
-07,Jurong Community Hospital,12.52921283437792
-07,Khoo Teck Puat Hospital,16.39397488544452
-07,Ng Teng Fong General Hospital,12.53058710365078
-07,National University Hospital,7.143411625007229
-07,Sengkang General Hospital,13.771534376476023
-07,Singapore General Hospital,1.1358931164950548
-07,Tan Tock Seng Hospital,4.937766568174821
-07,Woodlands Health,17.363490764415427
-08,Alexandra Hospital,4.44001334486334
-08,Changi General Hospital,13.872254774259108
-08,Jurong Community Hospital,12.152110812328399
-08,Khoo Teck Puat Hospital,16.23391142624054
-08,Ng Teng Fong General Hospital,12.153571820837314
-08,National University Hospital,6.7662901131069
-08,Sengkang General Hospital,13.774400307130943
-08,Singapore General Hospital,0.7823063553658263
-08,Tan Tock Seng Hospital,4.8061809370487545
-08,Woodlands Health,17.11189638065441
-09,Alexandra Hospital,4.689878327026545
-09,Changi General Hospital,16.29335295663779
-09,Jurong Community Hospital,12.551905500551335
-09,Khoo Teck Puat Hospital,18.699966907369635
-09,Ng Teng Fong General Hospital,12.558788961338104
-09,National University Hospital,6.789831778870255
-09,Sengkang General Hospital,16.53496946797067
-09,Singapore General Hospital,2.461037282224146
-09,Tan Tock Seng Hospital,7.431956277993057
-09,Woodlands Health,19.144840775617034
-10,Alexandra Hospital,1.4354877481482977
-10,Changi General Hospital,17.17592651902835
-10,Jurong Community Hospital,9.240129287000185
-10,Khoo Teck Puat Hospital,16.692799833118244
-10,Ng Teng Fong General Hospital,9.246734416301557
-10,National University Hospital,3.493646239136252
-10,Sengkang General Hospital,15.747178660788006
-10,Singapore General Hospital,2.8800375213452054
-10,Tan Tock Seng Hospital,6.386614725667108
-10,Woodlands Health,16.489653689519617
-11,Alexandra Hospital,2.095373227643015
-11,Changi General Hospital,19.349274426191275
-11,Jurong Community Hospital,6.8751917642919365
-11,Khoo Teck Puat Hospital,16.715631289551396
-11,Ng Teng Fong General Hospital,6.885905359869453
-11,National University Hospital,1.3196295689359165
-11,Sengkang General Hospital,16.914823247512857
-11,Singapore General Hospital,5.564702161161513
-11,Tan Tock Seng Hospital,7.912413238054952
-11,Woodlands Health,15.701237706343836
-12,Alexandra Hospital,5.4142790692951435
-12,Changi General Hospital,21.221171730064537
-12,Jurong Community Hospital,2.7202638721450696
-12,Khoo Teck Puat Hospital,15.192154217967612
-12,Ng Teng Fong General Hospital,2.732595800751509
-12,National University Hospital,3.142788065952731
-12,Sengkang General Hospital,17.132416795436335
-12,Singapore General Hospital,9.085364730290173
-12,Tan Tock Seng Hospital,9.501075645029832
-12,Woodlands Health,13.068281795908838
-13,Alexandra Hospital,2.483449117055656
-13,Changi General Hospital,18.71553226673182
-13,Jurong Community Hospital,5.449068034838688
-13,Khoo Teck Puat Hospital,14.79467639957634
-13,Ng Teng Fong General Hospital,5.454102180500025
-13,National University Hospital,0.7816327238461229
-13,Sengkang General Hospital,15.495854030824258
-13,Singapore General Hospital,6.110071491505987
-13,Tan Tock Seng Hospital,7.001722659348437
-13,Woodlands Health,13.64802844338979
-14,Alexandra Hospital,0.867569858483122
-14,Changi General Hospital,16.930688381042618
-14,Jurong Community Hospital,7.480387785229295
-14,Khoo Teck Puat Hospital,14.724189074997769
-14,Ng Teng Fong General Hospital,7.482969690973196
-14,National University Hospital,2.2600748677310674
-14,Sengkang General Hospital,14.452642397237124
-14,Singapore General Hospital,4.020004111008001
-14,Tan Tock Seng Hospital,5.402695297789081
-14,Woodlands Health,14.29085672085425
-15,Alexandra Hospital,1.28265654046921
-15,Changi General Hospital,16.143823264058494
-15,Jurong Community Hospital,9.07150064881355
-15,Khoo Teck Puat Hospital,15.486167486854827
-15,Ng Teng Fong General Hospital,9.074732569952612
-15,National University Hospital,3.5979915971911796
-15,Sengkang General Hospital,14.475269909243941
-15,Singapore General Hospital,2.453998157366619
-15,Tan Tock Seng Hospital,5.128257950638652
-15,Woodlands Health,15.469530454887796
-16,Alexandra Hospital,3.2360844334610173
-16,Changi General Hospital,14.537244797231914
-16,Jurong Community Hospital,10.893227217205876
-16,Khoo Teck Puat Hospital,15.62637284776642
-16,Ng Teng Fong General Hospital,10.894695683429166
-16,National University Hospital,5.547529410446511
-16,Sengkang General Hospital,13.716428714570037
-16,Singapore General Hospital,0.730182349500276
-16,Tan Tock Seng Hospital,4.431191674465274
-16,Woodlands Health,16.205608637664746
-17,Alexandra Hospital,5.177535660004914
-17,Changi General Hospital,12.3476648624446
-17,Jurong Community Hospital,12.264747586043415
-17,Khoo Teck Puat Hospital,14.703546138716815
-17,Ng Teng Fong General Hospital,12.262544248283312
-17,National University Hospital,7.371323270414891
-17,Sengkang General Hospital,11.97718270348527
-17,Singapore General Hospital,2.3139773060456617
-17,Tan Tock Seng Hospital,3.2438457278404345
-17,Woodlands Health,15.93521768087016
-18,Alexandra Hospital,5.8709639561592715
-18,Changi General Hospital,11.47590606327634
-18,Jurong Community Hospital,12.549303270875397
-18,Khoo Teck Puat Hospital,13.958203531030783
-18,Ng Teng Fong General Hospital,12.545199819777048
-18,National University Hospital,7.957543968476681
-18,Sengkang General Hospital,11.003133619844604
-18,Singapore General Hospital,3.300661523717473
-18,Tan Tock Seng Hospital,2.616042931473376
-18,Woodlands Health,15.433766840199455
-19,Alexandra Hospital,6.526254070312576
-19,Changi General Hospital,10.802509787930875
-19,Jurong Community Hospital,13.049295919980988
-19,Khoo Teck Puat Hospital,13.754762885898018
-19,Ng Teng Fong General Hospital,13.044328897626329
-19,National University Hospital,8.582166983738183
-19,Sengkang General Hospital,10.504881317602655
-19,Singapore General Hospital,3.9371838397617513
-19,Tan Tock Seng Hospital,2.668970801388195
-19,Woodlands Health,15.442803411346048
-20,Alexandra Hospital,6.346532645815935
-20,Changi General Hospital,10.914302022870295
-20,Jurong Community Hospital,12.508018695986813
-20,Khoo Teck Puat Hospital,13.021494187116113
-20,Ng Teng Fong General Hospital,12.50197773895705
-20,National University Hospital,8.281118026501192
-20,Sengkang General Hospital,10.022366260656028
-20,Singapore General Hospital,4.191918080636133
-20,Tan Tock Seng Hospital,1.8958829756208568
-20,Woodlands Health,14.659549326284719
-21,Alexandra Hospital,6.106821977799311
-21,Changi General Hospital,11.196338094907462
-21,Jurong Community Hospital,11.992576518279524
-21,Khoo Teck Puat Hospital,12.538961826850743
-21,Ng Teng Fong General Hospital,11.985891132830508
-21,National University Hospital,7.937863008515921
-21,Sengkang General Hospital,9.82540112618032
-21,Singapore General Hospital,4.322898193319202
-21,Tan Tock Seng Hospital,1.2872693749177084
-21,Woodlands Health,14.078286242182886
-22,Alexandra Hospital,4.6847365424953065
-22,Changi General Hospital,12.595196524236709
-22,Jurong Community Hospital,10.930737546773106
-22,Khoo Teck Puat Hospital,13.130559177382935
-22,Ng Teng Fong General Hospital,10.926063091685704
-22,National University Hospital,6.573037104525062
-22,Sengkang General Hospital,11.032449595884001
-22,Singapore General Hospital,3.2319429179516073
-22,Tan Tock Seng Hospital,1.7401350727065783
-22,Woodlands Health,14.183043422658407
-23,Alexandra Hospital,4.111344741869762
-23,Changi General Hospital,13.18187226064481
-23,Jurong Community Hospital,10.973211873335266
-23,Khoo Teck Puat Hospital,14.090311540757233
-23,Ng Teng Fong General Hospital,10.970782566541924
-23,National University Hospital,6.199621294326206
-23,Sengkang General Hospital,12.000021299153339
-23,Singapore General Hospital,2.232114812891152
-23,Tan Tock Seng Hospital,2.740776658628033
-23,Woodlands Health,14.99075686237969
-24,Alexandra Hospital,2.3109781219984913
-24,Changi General Hospital,14.999309014952896
-24,Jurong Community Hospital,9.026206876410882
-24,Khoo Teck Puat Hospital,14.01172929871222
-24,Ng Teng Fong General Hospital,9.025184306405663
-24,National University Hospital,4.203333030094291
-24,Sengkang General Hospital,12.948302718764237
-24,Singapore General Hospital,2.8389976284885634
-24,Tan Tock Seng Hospital,3.6493280875738594
-24,Woodlands Health,14.235706125532188
-25,Alexandra Hospital,3.507145229622679
-25,Changi General Hospital,14.55687391632069
-25,Jurong Community Hospital,8.474669614016406
-25,Khoo Teck Puat Hospital,12.327170880751263
-25,Ng Teng Fong General Hospital,8.46910807967717
-25,National University Hospital,4.6924812489948
-25,Sengkang General Hospital,11.65705324179573
-25,Singapore General Hospital,4.3748486735243794
-25,Tan Tock Seng Hospital,2.8207726413019643
-25,Woodlands Health,12.572604397412153
-26,Alexandra Hospital,3.6568782286225487
-26,Changi General Hospital,16.73398782976305
-26,Jurong Community Hospital,6.031863986249481
-26,Khoo Teck Puat Hospital,12.212978692313362
-26,Ng Teng Fong General Hospital,6.0255976754219445
-26,National University Hospital,3.4162107303126135
-26,Sengkang General Hospital,12.910910098319173
-26,Singapore General Hospital,6.194339747388093
-26,Tan Tock Seng Hospital,5.063152352903797
-26,Woodlands Health,11.496880045000177
-27,Alexandra Hospital,3.6803158086731846
-27,Changi General Hospital,17.98560500350784
-27,Jurong Community Hospital,4.933079029166462
-27,Khoo Teck Puat Hospital,12.979566812306427
-27,Ng Teng Fong General Hospital,4.929575295950291
-27,National University Hospital,2.636685774080578
-27,Sengkang General Hospital,14.084145368322284
-27,Singapore General Hospital,6.806414380607055
-27,Tan Tock Seng Hospital,6.289767672201518
-27,Woodlands Health,11.811820833424473
-28,Alexandra Hospital,4.85914256418896
-28,Changi General Hospital,16.043887731715756
-28,Jurong Community Hospital,6.476800097716748
-28,Khoo Teck Puat Hospital,10.874799970818112
-28,Ng Teng Fong General Hospital,6.465808561219285
-28,National University Hospital,4.750747856988111
-28,Sengkang General Hospital,11.742620679999632
-28,Singapore General Hospital,6.894675226961474
-28,Tan Tock Seng Hospital,4.658693031793041
-28,Woodlands Health,10.33267901421035
-29,Alexandra Hospital,4.939820940827898
-29,Changi General Hospital,13.983748565445925
-29,Jurong Community Hospital,8.60274059332613
-29,Khoo Teck Puat Hospital,10.827950408816385
-29,Ng Teng Fong General Hospital,8.593030618514481
-29,National University Hospital,5.780108950632829
-29,Sengkang General Hospital,10.383246944759364
-29,Singapore General Hospital,5.687517512333507
-29,Tan Tock Seng Hospital,2.4932982618609993
-29,Woodlands Health,11.251066673195844
-30,Alexandra Hospital,5.438209579568393
-30,Changi General Hospital,12.325723508316635
-30,Jurong Community Hospital,10.470692832490453
-30,Khoo Teck Puat Hospital,11.517412143464547
-30,Ng Teng Fong General Hospital,10.462540857277995
-30,National University Hospital,6.909711561079977
-30,Sengkang General Hospital,9.775669215131826
-30,Singapore General Hospital,4.791450414965395
-30,Tan Tock Seng Hospital,0.586283749991366
-30,Woodlands Health,12.641228489529226
-31,Alexandra Hospital,7.495363343423732
-31,Changi General Hospital,10.899623338563504
-31,Jurong Community Hospital,11.612502626501975
-31,Khoo Teck Puat Hospital,9.90110731287788
-31,Ng Teng Fong General Hospital,11.60070844304213
-31,National University Hospital,8.780953772609214
-31,Sengkang General Hospital,7.675069625553453
-31,Singapore General Hospital,6.7195633754038075
-31,Tan Tock Seng Hospital,1.7580256992764667
-31,Woodlands Health,11.703935786178953
-32,Alexandra Hospital,7.102795483636638
-32,Changi General Hospital,10.528732010838961
-32,Jurong Community Hospital,12.159363697072168
-32,Khoo Teck Puat Hospital,11.218238481917771
-32,Ng Teng Fong General Hospital,12.1499144419942
-32,National University Hospital,8.694006708032711
-32,Sengkang General Hospital,8.437830906074417
-32,Singapore General Hospital,5.722181031454676
-32,Tan Tock Seng Hospital,1.223080946115104
-32,Woodlands Health,13.041966118554374
-33,Alexandra Hospital,7.481452414142763
-33,Changi General Hospital,9.820336277205687
-33,Jurong Community Hospital,13.190796987918652
-33,Khoo Teck Puat Hospital,12.294440725918427
-33,Ng Teng Fong General Hospital,13.182821449852451
-33,National University Hospital,9.308141951084362
-33,Sengkang General Hospital,8.858465668267476
-33,Singapore General Hospital,5.42939471054438
-33,Tan Tock Seng Hospital,2.166156400326314
-33,Woodlands Health,14.31043399744704
-34,Alexandra Hospital,9.216918235344206
-34,Changi General Hospital,8.383733359262871
-34,Jurong Community Hospital,14.18844914824798
-34,Khoo Teck Puat Hospital,11.08577965322044
-34,Ng Teng Fong General Hospital,14.177643649160464
-34,National University Hospital,10.866485476286766
-34,Sengkang General Hospital,6.974595243972718
-34,Singapore General Hospital,7.383583541255391
-34,Tan Tock Seng Hospital,3.3980626517188193
-34,Woodlands Health,13.686624492441908
-35,Alexandra Hospital,9.373155170787678
-35,Changi General Hospital,9.215698401574386
-35,Jurong Community Hospital,13.345576679597876
-35,Khoo Teck Puat Hospital,9.354699853907153
-35,Ng Teng Fong General Hospital,13.332324575537246
-35,National University Hospital,10.708457846097083
-35,Sengkang General Hospital,5.947027500682519
-35,Singapore General Hospital,8.212224181100893
-35,Tan Tock Seng Hospital,3.476452643252588
-35,Woodlands Health,11.949856462792045
-36,Alexandra Hospital,10.004492706914942
-36,Changi General Hospital,7.551073698598098
-36,Jurong Community Hospital,15.006548583725298
-36,Khoo Teck Puat Hospital,11.263046592937446
-36,Ng Teng Fong General Hospital,14.995497164760554
-36,National University Hospital,11.687050904941424
-36,Sengkang General Hospital,6.625559793039783
-36,Singapore General Hospital,8.01836628464543
-36,Tan Tock Seng Hospital,4.225268375775045
-36,Woodlands Health,14.118423040274562
-37,Alexandra Hospital,10.226950577891857
-37,Changi General Hospital,7.104896190531121
-37,Jurong Community Hospital,15.59918374177326
-37,Khoo Teck Puat Hospital,12.105327480916246
-37,Ng Teng Fong General Hospital,15.589077701555828
-37,National University Hospital,12.026503002600752
-37,Sengkang General Hospital,7.195406153539975
-37,Singapore General Hospital,7.947328845227049
-37,Tan Tock Seng Hospital,4.653848809497537
-37,Woodlands Health,14.992862261052588
-38,Alexandra Hospital,9.17531881569643
-38,Changi General Hospital,8.092662134165433
-38,Jurong Community Hospital,15.098635280710003
-38,Khoo Teck Puat Hospital,13.056545455168594
-38,Ng Teng Fong General Hospital,15.090576404329521
-38,National University Hospital,11.11400415043638
-38,Sengkang General Hospital,8.570350316789238
-38,Singapore General Hospital,6.626509448622777
-38,Tan Tock Seng Hospital,4.0654782887029635
-38,Woodlands Health,15.582445483541926
-39,Alexandra Hospital,9.124379291215503
-39,Changi General Hospital,8.191772167553362
-39,Jurong Community Hospital,15.242744074282806
-39,Khoo Teck Puat Hospital,13.49646596900743
-39,Ng Teng Fong General Hospital,15.235344773854106
-39,National University Hospital,11.118409674911055
-39,Sengkang General Hospital,8.994666119134882
-39,Singapore General Hospital,6.430177072270272
-39,Tan Tock Seng Hospital,4.2444559196388685
-39,Woodlands Health,15.979576848939926
-40,Alexandra Hospital,11.254355536047228
-40,Changi General Hospital,6.027947849785545
-40,Jurong Community Hospital,16.706353172563652
-40,Khoo Teck Puat Hospital,12.618239721817101
-40,Ng Teng Fong General Hospital,16.696155358270442
-40,National University Hospital,13.098025477988045
-40,Sengkang General Hospital,7.1593905883360085
-40,Singapore General Hospital,8.804057976845808
-40,Tan Tock Seng Hospital,5.757601163627594
-40,Woodlands Health,15.760106451944793
-41,Alexandra Hospital,12.624907515547184
-41,Changi General Hospital,4.647339988556664
-41,Jurong Community Hospital,18.240781074828565
-41,Khoo Teck Puat Hospital,13.610734086501292
-41,Ng Teng Fong General Hospital,18.230732748825044
-41,National University Hospital,14.535773637975513
-41,Sengkang General Hospital,7.587467541784186
-41,Singapore General Hospital,9.954984964939941
-41,Tan Tock Seng Hospital,7.2662865233407725
-41,Woodlands Health,17.014084071053418
-42,Alexandra Hospital,11.727283911484788
-42,Changi General Hospital,5.854070596721992
-42,Jurong Community Hospital,17.881827356375318
-42,Khoo Teck Puat Hospital,14.63609528211285
-42,Ng Teng Fong General Hospital,17.873822399897524
-42,National University Hospital,13.76976839569248
-42,Sengkang General Hospital,9.003196153649094
-42,Singapore General Hospital,8.774273725818214
-42,Tan Tock Seng Hospital,6.84810065628062
-42,Woodlands Health,17.71188982342121
-43,Alexandra Hospital,10.21246764457208
-43,Changi General Hospital,7.413680737646176
-43,Jurong Community Hospital,16.609562763185554
-43,Khoo Teck Puat Hospital,14.613606302243465
-43,Ng Teng Fong General Hospital,16.602834376522697
-43,National University Hospital,12.2996093705281
-43,Sengkang General Hospital,9.593357375034017
-43,Singapore General Hospital,7.201763025763898
-43,Tan Tock Seng Hospital,5.65874453057387
-43,Woodlands Health,17.300908710426167
-44,Alexandra Hospital,12.44574271196231
-44,Changi General Hospital,5.695781950505164
-44,Jurong Community Hospital,18.847533037986246
-44,Khoo Teck Puat Hospital,15.725211202560635
-44,Ng Teng Fong General Hospital,18.84031434300463
-44,National University Hospital,14.557382286847282
-44,Sengkang General Hospital,9.910090813593166
-44,Singapore General Hospital,9.300718595824549
-44,Tan Tock Seng Hospital,7.8457115397805826
-44,Woodlands Health,18.8511571884434
-45,Alexandra Hospital,13.69648233431911
-45,Changi General Hospital,4.090211534396242
-45,Jurong Community Hospital,19.728682427885868
-45,Khoo Teck Puat Hospital,15.328926483728463
-45,Ng Teng Fong General Hospital,19.719823569907245
-45,National University Hospital,15.728224890196499
-45,Sengkang General Hospital,9.069684486517806
-45,Singapore General Hospital,10.713758312415488
-45,Tan Tock Seng Hospital,8.692637906906397
-45,Woodlands Health,18.794949626369505
-46,Alexandra Hospital,16.062244246694114
-46,Changi General Hospital,2.2229983869912484
-46,Jurong Community Hospital,21.909054414511907
-46,Khoo Teck Puat Hospital,16.237414070322718
-46,Ng Teng Fong General Hospital,21.89913581224273
-46,National University Hospital,18.067876801080548
-46,Sengkang General Hospital,9.475682964879146
-46,Singapore General Hospital,13.091272978426755
-46,Tan Tock Seng Hospital,10.91299070661025
-46,Woodlands Health,20.098028978140945
-47,Alexandra Hospital,14.454358347896658
-47,Changi General Hospital,2.841550510775984
-47,Jurong Community Hospital,19.709732204495566
-47,Khoo Teck Puat Hospital,13.593672983243122
-47,Ng Teng Fong General Hospital,19.698166198792066
-47,National University Hospital,16.29161945971899
-47,Sengkang General Hospital,6.974136081834529
-47,Singapore General Hospital,11.887855759181289
-47,Tan Tock Seng Hospital,8.899416786674598
-47,Woodlands Health,17.420070411703975
-48,Alexandra Hospital,17.568320131045585
-48,Changi General Hospital,0.9725745535658832
-48,Jurong Community Hospital,23.071966724457614
-48,Khoo Teck Puat Hospital,16.24436994961488
-48,Ng Teng Fong General Hospital,23.06066460372374
-48,National University Hospital,19.500258855372476
-48,Sengkang General Hospital,9.259473499892101
-48,Singapore General Hospital,14.730181083417298
-48,Tan Tock Seng Hospital,12.194183173955281
-48,Woodlands Health,20.388991673252
-49,Alexandra Hospital,20.916843491640133
-49,Changi General Hospital,3.6575845137794962
-49,Jurong Community Hospital,26.052401424459024
-49,Khoo Teck Puat Hospital,17.664198860652874
-49,Ng Teng Fong General Hospital,26.039524446393173
-49,National University Hospital,22.78004083424002
-49,Sengkang General Hospital,10.641684380941149
-49,Singapore General Hospital,18.171962792393145
-49,Tan Tock Seng Hospital,15.3775683247274
-49,Woodlands Health,22.18324362717332
-50,Alexandra Hospital,20.483655967751755
-50,Changi General Hospital,3.7452922619809765
-50,Jurong Community Hospital,25.036753485255332
-50,Khoo Teck Puat Hospital,15.733984272428467
-50,Ng Teng Fong General Hospital,25.022242551631056
-50,National University Hospital,22.19495108556793
-50,Sengkang General Hospital,8.814885073597564
-50,Singapore General Hospital,18.044001922739394
-50,Tan Tock Seng Hospital,14.722948528800583
-50,Woodlands Health,20.373239452250946
-51,Alexandra Hospital,18.763334472851593
-51,Changi General Hospital,3.7968178474825827
-51,Jurong Community Hospital,22.84701219025423
-51,Khoo Teck Puat Hospital,13.24493974379188
-51,Ng Teng Fong General Hospital,22.831503649925576
-51,National University Hospital,20.33352590690401
-51,Sengkang General Hospital,6.31701369150525
-51,Singapore General Hospital,16.630787010582623
-51,Tan Tock Seng Hospital,12.882900693993207
-51,Woodlands Health,17.87348678689557
-52,Alexandra Hospital,17.30089735941616
-52,Changi General Hospital,1.4273062288602982
-52,Jurong Community Hospital,22.10846917906943
-52,Khoo Teck Puat Hospital,14.125631771968461
-52,Ng Teng Fong General Hospital,22.09509304224233
-52,National University Hospital,19.050412732202567
-52,Sengkang General Hospital,7.0771639751901665
-52,Singapore General Hospital,14.844914664140246
-52,Tan Tock Seng Hospital,11.589821980565546
-52,Woodlands Health,18.449953729296272
-53,Alexandra Hospital,11.778469000955328
-53,Changi General Hospital,7.221898512364519
-53,Jurong Community Hospital,15.631703441187607
-53,Khoo Teck Puat Hospital,9.255720357133516
-53,Ng Teng Fong General Hospital,15.617181076720177
-53,National University Hospital,13.160325313255388
-53,Sengkang General Hospital,4.052650801231793
-53,Singapore General Hospital,10.302003393742078
-53,Tan Tock Seng Hospital,5.846099312266157
-53,Woodlands Health,12.72638206876938
-54,Alexandra Hospital,12.566664766809032
-54,Changi General Hospital,7.879364941725487
-54,Jurong Community Hospital,15.697915963684986
-54,Khoo Teck Puat Hospital,7.945894080837205
-54,Ng Teng Fong General Hospital,15.681570984494671
-54,National University Hospital,13.751835014013551
-54,Sengkang General Hospital,2.7346344731807743
-54,Singapore General Hospital,11.423540886471278
-54,Tan Tock Seng Hospital,6.719264610231661
-54,Woodlands Health,11.700014680703474
-55,Alexandra Hospital,10.675641779030995
-55,Changi General Hospital,9.514189058982009
-55,Jurong Community Hospital,13.61648990688445
-55,Khoo Teck Puat Hospital,7.591292371487087
-55,Ng Teng Fong General Hospital,13.600480498384247
-55,National University Hospital,11.735439035082736
-55,Sengkang General Hospital,4.456868755043497
-55,Singapore General Hospital,9.919478596509393
-55,Tan Tock Seng Hospital,5.00999314411971
-55,Woodlands Health,10.59395438661635
-56,Alexandra Hospital,10.304995875240557
-56,Changi General Hospital,12.12162268467117
-56,Jurong Community Hospital,11.682507677070554
-56,Khoo Teck Puat Hospital,5.85815509860333
-56,Ng Teng Fong General Hospital,11.663932711007948
-56,National University Hospital,10.84682012673115
-56,Sengkang General Hospital,5.816119305510309
-56,Singapore General Hospital,10.495389821498346
-56,Tan Tock Seng Hospital,5.618153765393081
-56,Woodlands Health,8.075554636978403
-57,Alexandra Hospital,8.682075574230797
-57,Changi General Hospital,12.833889685197974
-57,Jurong Community Hospital,10.279117645841836
-57,Khoo Teck Puat Hospital,7.151234693182067
-57,Ng Teng Fong General Hospital,10.26194901837974
-57,National University Hospital,9.184171539159562
-57,Sengkang General Hospital,7.2968389183396445
-57,Singapore General Hospital,9.128119985222044
-57,Tan Tock Seng Hospital,4.455868685973552
-57,Woodlands Health,8.493690665509368
-58,Alexandra Hospital,6.113458194850154
-58,Changi General Hospital,18.307644830634914
-58,Jurong Community Hospital,4.271574324786913
-58,Khoo Teck Puat Hospital,11.105580274007178
-58,Ng Teng Fong General Hospital,4.256200194150549
-58,National University Hospital,4.985795010253281
-58,Sengkang General Hospital,13.311384316263396
-58,Singapore General Hospital,8.918476938034646
-58,Tan Tock Seng Hospital,7.114580758019321
-58,Woodlands Health,9.440386194301851
-59,Alexandra Hospital,6.520096224031303
-59,Changi General Hospital,19.928806717657594
-59,Jurong Community Hospital,2.61378576589923
-59,Khoo Teck Puat Hospital,12.355335934532288
-59,Ng Teng Fong General Hospital,2.5987189495497915
-59,National University Hospital,4.843818030197921
-59,Sengkang General Hospital,14.938505781852093
-59,Singapore General Hospital,9.750699784483356
-59,Tan Tock Seng Hospital,8.58399807878385
-59,Woodlands Health,10.12857152443068
-60,Alexandra Hospital,8.237696234455687
-60,Changi General Hospital,23.202834017361525
-60,Jurong Community Hospital,0.7915638346782924
-60,Khoo Teck Puat Hospital,15.213444097878305
-60,Ng Teng Fong General Hospital,0.8128621349672482
-60,National University Hospital,5.997754422661494
-60,Sengkang General Hospital,18.277987755799252
-60,Singapore General Hospital,11.8685793871632
-60,Tan Tock Seng Hospital,11.668766264225226
-60,Woodlands Health,12.232566261286607
-61,Alexandra Hospital,10.376336730010554
-61,Changi General Hospital,25.613651299663346
-61,Jurong Community Hospital,3.1107945059048334
-61,Khoo Teck Puat Hospital,16.999080681151355
-61,Ng Teng Fong General Hospital,3.124518027456409
-61,National University Hospital,8.066215551360235
-61,Sengkang General Hospital,20.519689891328696
-61,Singapore General Hospital,14.061375666819623
-61,Tan Tock Seng Hospital,14.084402974448095
-61,Woodlands Health,13.540609323668471
-62,Alexandra Hospital,13.526501561144435
-62,Changi General Hospital,29.623687144675657
-62,Jurong Community Hospital,7.277446438467807
-62,Khoo Teck Puat Hospital,21.13261104711087
-62,Ng Teng Fong General Hospital,7.2944441557109085
-62,National University Hospital,11.219160637899638
-62,Sengkang General Hospital,24.75485900187055
-62,Singapore General Hospital,17.207705144909173
-62,Tan Tock Seng Hospital,17.961153134056158
-62,Woodlands Health,17.404708191088677
-63,Alexandra Hospital,17.0396471147788
-63,Changi General Hospital,32.95809735649303
-63,Jurong Community Hospital,10.468162319917296
-63,Khoo Teck Puat Hospital,23.590034120282642
-63,Ng Teng Fong General Hospital,10.481866426801526
-63,National University Hospital,14.729545397819647
-63,Sengkang General Hospital,27.74638622481687
-63,Singapore General Hospital,20.72186370302477
-63,Tan Tock Seng Hospital,21.35991354529291
-63,Woodlands Health,19.47000115427414
-64,Alexandra Hospital,12.823786025815888
-64,Changi General Hospital,27.288181736881757
-64,Jurong Community Hospital,5.062875252909363
-64,Khoo Teck Puat Hospital,17.293917967247825
-64,Ng Teng Fong General Hospital,5.066278630478217
-64,National University Hospital,10.54913992610117
-64,Sengkang General Hospital,21.59740393229287
-64,Singapore General Hospital,16.47027653227846
-64,Tan Tock Seng Hospital,16.023213126977396
-64,Woodlands Health,13.28266210417746
-65,Alexandra Hospital,9.474181637378242
-65,Changi General Hospital,21.99065058202352
-65,Jurong Community Hospital,2.755131203900479
-65,Khoo Teck Puat Hospital,12.233796613277928
-65,Ng Teng Fong General Hospital,2.731111593209078
-65,National University Hospital,7.650709412328876
-65,Sengkang General Hospital,16.140087958645474
-65,Singapore General Hospital,12.71457583446692
-65,Tan Tock Seng Hospital,11.131594914197274
-65,Woodlands Health,8.922054325379209
-66,Alexandra Hospital,9.515210031742491
-66,Changi General Hospital,21.19041001692972
-66,Jurong Community Hospital,3.614940551812836
-66,Khoo Teck Puat Hospital,11.169347845642848
-66,Ng Teng Fong General Hospital,3.590137444421152
-66,National University Hospital,7.883526919308184
-66,Sengkang General Hospital,15.160585092837168
-66,Singapore General Hospital,12.566405675371337
-66,Tan Tock Seng Hospital,10.585494754374281
-66,Woodlands Health,7.943545878927701
-67,Alexandra Hospital,10.315327915964652
-67,Changi General Hospital,20.480630491023334
-67,Jurong Community Hospital,5.220182407541256
-67,Khoo Teck Puat Hospital,9.635612667218547
-67,Ng Teng Fong General Hospital,5.195337478875716
-67,National University Hospital,8.942920112173939
-67,Sengkang General Hospital,14.032030274208461
-67,Singapore General Hospital,13.062984052523145
-67,Tan Tock Seng Hospital,10.46894499809298
-67,Woodlands Health,6.325121783768024
-68,Alexandra Hospital,12.493236599090777
-68,Changi General Hospital,22.915265788448124
-68,Jurong Community Hospital,6.01246621520011
-68,Khoo Teck Puat Hospital,10.938484542856735
-68,Ng Teng Fong General Hospital,5.990017700680202
-68,National University Hospital,10.856472650166511
-68,Sengkang General Hospital,16.131637863803665
-68,Singapore General Hospital,15.461136159652122
-68,Tan Tock Seng Hospital,13.053159066730945
-68,Woodlands Health,6.698815104386524
-69,Alexandra Hospital,12.68553714918551
-69,Changi General Hospital,25.132874038450797
-69,Jurong Community Hospital,5.003900071865975
-69,Khoo Teck Puat Hospital,13.921537979045253
-69,Ng Teng Fong General Hospital,4.989836892436869
-69,National University Hospital,10.6773353720464
-69,Sengkang General Hospital,18.78647943438537
-69,Singapore General Hospital,16.05479777172136
-69,Tan Tock Seng Hospital,14.524398845921011
-69,Woodlands Health,9.705740498858212
-70,Alexandra Hospital,16.37390197347869
-70,Changi General Hospital,28.502277483407045
-70,Jurong Community Hospital,8.535294015340945
-70,Khoo Teck Puat Hospital,16.12075761145171
-70,Ng Teng Fong General Hospital,8.525367226855984
-70,National University Hospital,14.297981259170102
-70,Sengkang General Hospital,21.720029615405473
-70,Singapore General Hospital,19.787793187092696
-70,Tan Tock Seng Hospital,18.198476944438482
-70,Woodlands Health,11.399589491667523
-71,Alexandra Hospital,18.642697071744465
-71,Changi General Hospital,27.851894154958746
-71,Jurong Community Hospital,11.552317471867665
-71,Khoo Teck Puat Hospital,13.767491876764552
-71,Ng Teng Fong General Hospital,11.534515997239344
-71,National University Hospital,16.902723924262535
-71,Sengkang General Hospital,20.266645632855536
-71,Singapore General Hospital,21.63384965373072
-71,Tan Tock Seng Hospital,18.972055055119764
-71,Woodlands Health,8.853306888278254
-72,Alexandra Hospital,15.203719711130896
-72,Changi General Hospital,23.525336552280073
-72,Jurong Community Hospital,9.175775254499634
-72,Khoo Teck Puat Hospital,9.866300739534658
-72,Ng Teng Fong General Hospital,9.153062418866124
-72,National University Hospital,13.762854535941992
-72,Sengkang General Hospital,16.051972316117087
-72,Singapore General Hospital,17.879123251406345
-72,Tan Tock Seng Hospital,14.827380133014895
-72,Woodlands Health,5.009595010882625
-73,Alexandra Hospital,16.327715681654357
-73,Changi General Hospital,21.06332515223008
-73,Jurong Community Hospital,12.040419386144697
-73,Khoo Teck Puat Hospital,6.22063893007697
-73,Ng Teng Fong General Hospital,12.015735254562298
-73,National University Hospital,15.421996484548565
-73,Sengkang General Hospital,13.055175255284366
-73,Singapore General Hospital,18.287057147739176
-73,Tan Tock Seng Hospital,14.316434824934294
-73,Woodlands Health,1.6011979335912736
-75,Alexandra Hospital,18.10684556604501
-75,Changi General Hospital,18.624981884062038
-75,Jurong Community Hospital,15.53949032882587
-75,Khoo Teck Puat Hospital,3.4915404421953817
-75,Ng Teng Fong General Hospital,15.51477809466761
-75,National University Hospital,17.745579964817143
-75,Sengkang General Hospital,10.320865336773988
-75,Singapore General Hospital,19.248540366551303
-75,Tan Tock Seng Hospital,14.61161364628845
-75,Woodlands Health,4.164623429972863
-76,Alexandra Hospital,15.999956606246855
-76,Changi General Hospital,15.818202973502729
-76,Jurong Community Hospital,14.622961147565237
-76,Khoo Teck Puat Hospital,0.5650033284674271
-76,Ng Teng Fong General Hospital,14.599142668108751
-76,National University Hospital,15.93707697436667
-76,Sengkang General Hospital,7.546777218811115
-76,Singapore General Hospital,16.771336730455964
-76,Tan Tock Seng Hospital,11.987609493190899
-76,Woodlands Health,4.685668707333096
-77,Alexandra Hospital,12.880903634784968
-77,Changi General Hospital,16.437729431870412
-77,Jurong Community Hospital,10.979796443717383
-77,Khoo Teck Puat Hospital,3.475576632039012
-77,Ng Teng Fong General Hospital,10.956060770114032
-77,National University Hospital,12.552826885720759
-77,Sengkang General Hospital,8.786759924811747
-77,Singapore General Hospital,14.188869458695795
-77,Tan Tock Seng Hospital,9.800482653514898
-77,Woodlands Health,3.2375964936456083
-78,Alexandra Hospital,11.872501046891115
-78,Changi General Hospital,14.498431136303724
-78,Jurong Community Hospital,11.294650208065875
-78,Khoo Teck Puat Hospital,3.70714578744113
-78,Ng Teng Fong General Hospital,11.272604013541354
-78,National University Hospital,11.891243016731096
-78,Sengkang General Hospital,7.120401320995544
-78,Singapore General Hospital,12.74368050623414
-78,Tan Tock Seng Hospital,8.115438523853166
-78,Woodlands Health,5.248257931165363
-79,Alexandra Hospital,14.317221953697757
-79,Changi General Hospital,10.263964286736037
-79,Jurong Community Hospital,15.843485399536892
-79,Khoo Teck Puat Hospital,5.0477152694601175
-79,Ng Teng Fong General Hospital,15.823668389970683
-79,National University Hospital,15.06909835466531
-79,Sengkang General Hospital,2.1343988263595883
-79,Singapore General Hospital,13.855640061876581
-79,Tan Tock Seng Hospital,8.908554336299295
-79,Woodlands Health,9.435340327056016
-80,Alexandra Hospital,12.682833723539536
-80,Changi General Hospital,10.492839504667305
-80,Jurong Community Hospital,14.357752527615201
-80,Khoo Teck Puat Hospital,5.2789912507951335
-80,Ng Teng Fong General Hospital,14.33865796870003
-80,National University Hospital,13.426959999249018
-80,Sengkang General Hospital,3.1873913503533506
-80,Singapore General Hospital,12.333415998967281
-80,Tan Tock Seng Hospital,7.365902745709419
-80,Woodlands Health,9.015024236021045
-81,Alexandra Hospital,22.378625476791715
-81,Changi General Hospital,5.141628345884503
-81,Jurong Community Hospital,27.298953260287192
-81,Khoo Teck Puat Hospital,18.226071083816244
-81,Ng Teng Fong General Hospital,27.285280243357082
-81,National University Hospital,24.197008028491158
-81,Sengkang General Hospital,11.31760925116032
-81,Singapore General Hospital,19.704743107923747
-81,Tan Tock Seng Hospital,16.75904860910627
-81,Woodlands Health,22.876189586051815
-82,Alexandra Hospital,17.244685741006812
-82,Changi General Hospital,8.436908507175632
-82,Jurong Community Hospital,19.463090710341636
-82,Khoo Teck Puat Hospital,7.827764998536625
-82,Ng Teng Fong General Hospital,19.44385810073033
-82,National University Hospital,18.26748322586448
-82,Sengkang General Hospital,2.1177054275072207
-82,Singapore General Hospital,16.177927958384892
-82,Tan Tock Seng Hospital,11.465302160197332
-82,Woodlands Health,12.638801068208492
-88,Alexandra Hospital,8.125408452436337
-88,Changi General Hospital,10.778473960271688
-88,Jurong Community Hospital,11.767004172541908
-88,Khoo Teck Puat Hospital,9.152401994661563
-88,Ng Teng Fong General Hospital,11.753804903223784
-88,National University Hospital,9.285614147031714
-88,Sengkang General Hospital,7.00724745125318
-88,Singapore General Hospital,7.49222014191358
-88,Tan Tock Seng Hospital,2.52269232654971
-88,Woodlands Health,11.119553629432826
-91,Alexandra Hospital,22.734249358097422
-91,Changi General Hospital,5.517354458742237
-91,Jurong Community Hospital,27.587538669836754
-91,Khoo Teck Puat Hospital,18.331367314861563
-91,Ng Teng Fong General Hospital,27.573635368316104
-91,National University Hospital,24.537938121766626
-91,Sengkang General Hospital,11.465764330529359
-91,Singapore General Hospital,20.084927217339622
-91,Tan Tock Seng Hospital,17.091532816783904
-91,Woodlands Health,23.012336382362626
+01,AH,6.128172263352386
+01,CGH,12.31938683000217
+01,KTPH,16.233907538223942
+01,NTFGH,13.646893108857272
+01,NUH(A),8.435406630215267
+01,SKH,13.02154853000008
+01,SGH,2.5430045862028194
+01,TTSH,4.84494709661645
+01,WH,17.609359405716823
+02,AH,8.27241599210479
+02,CGH,9.898338905131064
+02,KTPH,15.668164772082898
+02,NTFGH,15.326514017337404
+02,NUH(A),10.501572755054376
+02,SKH,11.501757143062598
+02,SGH,4.919834975630918
+02,TTSH,5.083076559806141
+02,WH,17.717275885578186
+03,AH,6.227305673389078
+03,CGH,11.393296605509857
+03,KTPH,14.776059631340896
+03,NTFGH,13.227500943507453
+03,NUH(A),8.41724508933987
+03,SKH,11.547249473200546
+03,SGH,3.1782955124092367
+03,TTSH,3.501301973677271
+03,WH,16.3214455243573
+04,AH,5.169299044688322
+04,CGH,12.691874216256723
+04,KTPH,15.432910167352548
+04,NTFGH,12.54639125077605
+04,NUH(A),7.4402624406874045
+04,SKH,12.651519865400013
+04,SGH,1.876640243217667
+04,TTSH,3.9694926256394236
+04,WH,16.612456727210162
+05,AH,4.71378169547246
+05,CGH,13.182700800052594
+05,KTPH,15.567156404114193
+05,NTFGH,12.191199030199968
+05,NUH(A),7.002377585561429
+05,SKH,12.98763175583343
+05,SGH,1.3862803906341814
+05,TTSH,4.107203006415994
+05,WH,16.598822715552522
+06,AH,4.972752299304279
+06,CGH,13.202479249669668
+06,KTPH,15.973338486056692
+06,NTFGH,12.552716235222018
+06,NUH(A),7.283470160734551
+06,SKH,13.270248198914143
+06,SGH,1.4280820236458354
+06,TTSH,4.5070882886307295
+06,WH,17.04104801728484
+07,AH,4.816172315094875
+07,CGH,13.651626080895186
+07,KTPH,16.39397488544452
+07,NTFGH,12.53058710365078
+07,NUH(A),7.143411625007229
+07,SKH,13.771534376476023
+07,SGH,1.1358931164950548
+07,TTSH,4.937766568174821
+07,WH,17.363490764415427
+08,AH,4.44001334486334
+08,CGH,13.872254774259108
+08,KTPH,16.23391142624054
+08,NTFGH,12.153571820837314
+08,NUH(A),6.7662901131069
+08,SKH,13.774400307130943
+08,SGH,0.7823063553658263
+08,TTSH,4.8061809370487545
+08,WH,17.11189638065441
+09,AH,4.689878327026545
+09,CGH,16.29335295663779
+09,KTPH,18.699966907369635
+09,NTFGH,12.558788961338104
+09,NUH(A),6.789831778870255
+09,SKH,16.53496946797067
+09,SGH,2.461037282224146
+09,TTSH,7.431956277993057
+09,WH,19.144840775617034
+10,AH,1.4354877481482977
+10,CGH,17.17592651902835
+10,KTPH,16.692799833118244
+10,NTFGH,9.246734416301557
+10,NUH(A),3.493646239136252
+10,SKH,15.747178660788006
+10,SGH,2.8800375213452054
+10,TTSH,6.386614725667108
+10,WH,16.489653689519617
+11,AH,2.095373227643015
+11,CGH,19.349274426191275
+11,KTPH,16.715631289551396
+11,NTFGH,6.885905359869453
+11,NUH(A),1.3196295689359165
+11,SKH,16.914823247512857
+11,SGH,5.564702161161513
+11,TTSH,7.912413238054952
+11,WH,15.701237706343836
+12,AH,5.4142790692951435
+12,CGH,21.221171730064537
+12,KTPH,15.192154217967612
+12,NTFGH,2.732595800751509
+12,NUH(A),3.142788065952731
+12,SKH,17.132416795436335
+12,SGH,9.085364730290173
+12,TTSH,9.501075645029832
+12,WH,13.068281795908838
+13,AH,2.483449117055656
+13,CGH,18.71553226673182
+13,KTPH,14.79467639957634
+13,NTFGH,5.454102180500025
+13,NUH(A),0.7816327238461229
+13,SKH,15.495854030824258
+13,SGH,6.110071491505987
+13,TTSH,7.001722659348437
+13,WH,13.64802844338979
+14,AH,0.867569858483122
+14,CGH,16.930688381042618
+14,KTPH,14.724189074997769
+14,NTFGH,7.482969690973196
+14,NUH(A),2.2600748677310674
+14,SKH,14.452642397237124
+14,SGH,4.020004111008001
+14,TTSH,5.402695297789081
+14,WH,14.29085672085425
+15,AH,1.28265654046921
+15,CGH,16.143823264058494
+15,KTPH,15.486167486854827
+15,NTFGH,9.074732569952612
+15,NUH(A),3.5979915971911796
+15,SKH,14.475269909243941
+15,SGH,2.453998157366619
+15,TTSH,5.128257950638652
+15,WH,15.469530454887796
+16,AH,3.2360844334610173
+16,CGH,14.537244797231914
+16,KTPH,15.62637284776642
+16,NTFGH,10.894695683429166
+16,NUH(A),5.547529410446511
+16,SKH,13.716428714570037
+16,SGH,0.730182349500276
+16,TTSH,4.431191674465274
+16,WH,16.205608637664746
+17,AH,5.177535660004914
+17,CGH,12.3476648624446
+17,KTPH,14.703546138716815
+17,NTFGH,12.262544248283312
+17,NUH(A),7.371323270414891
+17,SKH,11.97718270348527
+17,SGH,2.3139773060456617
+17,TTSH,3.2438457278404345
+17,WH,15.93521768087016
+18,AH,5.8709639561592715
+18,CGH,11.47590606327634
+18,KTPH,13.958203531030783
+18,NTFGH,12.545199819777048
+18,NUH(A),7.957543968476681
+18,SKH,11.003133619844604
+18,SGH,3.300661523717473
+18,TTSH,2.616042931473376
+18,WH,15.433766840199455
+19,AH,6.526254070312576
+19,CGH,10.802509787930875
+19,KTPH,13.754762885898018
+19,NTFGH,13.044328897626329
+19,NUH(A),8.582166983738183
+19,SKH,10.504881317602655
+19,SGH,3.9371838397617513
+19,TTSH,2.668970801388195
+19,WH,15.442803411346048
+20,AH,6.346532645815935
+20,CGH,10.914302022870295
+20,KTPH,13.021494187116113
+20,NTFGH,12.50197773895705
+20,NUH(A),8.281118026501192
+20,SKH,10.022366260656028
+20,SGH,4.191918080636133
+20,TTSH,1.8958829756208568
+20,WH,14.659549326284719
+21,AH,6.106821977799311
+21,CGH,11.196338094907462
+21,KTPH,12.538961826850743
+21,NTFGH,11.985891132830508
+21,NUH(A),7.937863008515921
+21,SKH,9.82540112618032
+21,SGH,4.322898193319202
+21,TTSH,1.2872693749177084
+21,WH,14.078286242182886
+22,AH,4.6847365424953065
+22,CGH,12.595196524236709
+22,KTPH,13.130559177382935
+22,NTFGH,10.926063091685704
+22,NUH(A),6.573037104525062
+22,SKH,11.032449595884001
+22,SGH,3.2319429179516073
+22,TTSH,1.7401350727065783
+22,WH,14.183043422658407
+23,AH,4.111344741869762
+23,CGH,13.18187226064481
+23,KTPH,14.090311540757233
+23,NTFGH,10.970782566541924
+23,NUH(A),6.199621294326206
+23,SKH,12.000021299153339
+23,SGH,2.232114812891152
+23,TTSH,2.740776658628033
+23,WH,14.99075686237969
+24,AH,2.3109781219984913
+24,CGH,14.999309014952896
+24,KTPH,14.01172929871222
+24,NTFGH,9.025184306405663
+24,NUH(A),4.203333030094291
+24,SKH,12.948302718764237
+24,SGH,2.8389976284885634
+24,TTSH,3.6493280875738594
+24,WH,14.235706125532188
+25,AH,3.507145229622679
+25,CGH,14.55687391632069
+25,KTPH,12.327170880751263
+25,NTFGH,8.46910807967717
+25,NUH(A),4.6924812489948
+25,SKH,11.65705324179573
+25,SGH,4.3748486735243794
+25,TTSH,2.8207726413019643
+25,WH,12.572604397412153
+26,AH,3.6568782286225487
+26,CGH,16.73398782976305
+26,KTPH,12.212978692313362
+26,NTFGH,6.0255976754219445
+26,NUH(A),3.4162107303126135
+26,SKH,12.910910098319173
+26,SGH,6.194339747388093
+26,TTSH,5.063152352903797
+26,WH,11.496880045000177
+27,AH,3.6803158086731846
+27,CGH,17.98560500350784
+27,KTPH,12.979566812306427
+27,NTFGH,4.929575295950291
+27,NUH(A),2.636685774080578
+27,SKH,14.084145368322284
+27,SGH,6.806414380607055
+27,TTSH,6.289767672201518
+27,WH,11.811820833424473
+28,AH,4.85914256418896
+28,CGH,16.043887731715756
+28,KTPH,10.874799970818112
+28,NTFGH,6.465808561219285
+28,NUH(A),4.750747856988111
+28,SKH,11.742620679999632
+28,SGH,6.894675226961474
+28,TTSH,4.658693031793041
+28,WH,10.33267901421035
+29,AH,4.939820940827898
+29,CGH,13.983748565445925
+29,KTPH,10.827950408816385
+29,NTFGH,8.593030618514481
+29,NUH(A),5.780108950632829
+29,SKH,10.383246944759364
+29,SGH,5.687517512333507
+29,TTSH,2.4932982618609993
+29,WH,11.251066673195844
+30,AH,5.438209579568393
+30,CGH,12.325723508316635
+30,KTPH,11.517412143464547
+30,NTFGH,10.462540857277995
+30,NUH(A),6.909711561079977
+30,SKH,9.775669215131826
+30,SGH,4.791450414965395
+30,TTSH,0.586283749991366
+30,WH,12.641228489529226
+31,AH,7.495363343423732
+31,CGH,10.899623338563504
+31,KTPH,9.90110731287788
+31,NTFGH,11.60070844304213
+31,NUH(A),8.780953772609214
+31,SKH,7.675069625553453
+31,SGH,6.7195633754038075
+31,TTSH,1.7580256992764667
+31,WH,11.703935786178953
+32,AH,7.102795483636638
+32,CGH,10.528732010838961
+32,KTPH,11.218238481917771
+32,NTFGH,12.1499144419942
+32,NUH(A),8.694006708032711
+32,SKH,8.437830906074417
+32,SGH,5.722181031454676
+32,TTSH,1.223080946115104
+32,WH,13.041966118554374
+33,AH,7.481452414142763
+33,CGH,9.820336277205687
+33,KTPH,12.294440725918427
+33,NTFGH,13.182821449852451
+33,NUH(A),9.308141951084362
+33,SKH,8.858465668267476
+33,SGH,5.42939471054438
+33,TTSH,2.166156400326314
+33,WH,14.31043399744704
+34,AH,9.216918235344206
+34,CGH,8.383733359262871
+34,KTPH,11.08577965322044
+34,NTFGH,14.177643649160464
+34,NUH(A),10.866485476286766
+34,SKH,6.974595243972718
+34,SGH,7.383583541255391
+34,TTSH,3.3980626517188193
+34,WH,13.686624492441908
+35,AH,9.373155170787678
+35,CGH,9.215698401574386
+35,KTPH,9.354699853907153
+35,NTFGH,13.332324575537246
+35,NUH(A),10.708457846097083
+35,SKH,5.947027500682519
+35,SGH,8.212224181100893
+35,TTSH,3.476452643252588
+35,WH,11.949856462792045
+36,AH,10.004492706914942
+36,CGH,7.551073698598098
+36,KTPH,11.263046592937446
+36,NTFGH,14.995497164760554
+36,NUH(A),11.687050904941424
+36,SKH,6.625559793039783
+36,SGH,8.01836628464543
+36,TTSH,4.225268375775045
+36,WH,14.118423040274562
+37,AH,10.226950577891857
+37,CGH,7.104896190531121
+37,KTPH,12.105327480916246
+37,NTFGH,15.589077701555828
+37,NUH(A),12.026503002600752
+37,SKH,7.195406153539975
+37,SGH,7.947328845227049
+37,TTSH,4.653848809497537
+37,WH,14.992862261052588
+38,AH,9.17531881569643
+38,CGH,8.092662134165433
+38,KTPH,13.056545455168594
+38,NTFGH,15.090576404329521
+38,NUH(A),11.11400415043638
+38,SKH,8.570350316789238
+38,SGH,6.626509448622777
+38,TTSH,4.0654782887029635
+38,WH,15.582445483541926
+39,AH,9.124379291215503
+39,CGH,8.191772167553362
+39,KTPH,13.49646596900743
+39,NTFGH,15.235344773854106
+39,NUH(A),11.118409674911055
+39,SKH,8.994666119134882
+39,SGH,6.430177072270272
+39,TTSH,4.2444559196388685
+39,WH,15.979576848939926
+40,AH,11.254355536047228
+40,CGH,6.027947849785545
+40,KTPH,12.618239721817101
+40,NTFGH,16.696155358270442
+40,NUH(A),13.098025477988045
+40,SKH,7.1593905883360085
+40,SGH,8.804057976845808
+40,TTSH,5.757601163627594
+40,WH,15.760106451944793
+41,AH,12.624907515547184
+41,CGH,4.647339988556664
+41,KTPH,13.610734086501292
+41,NTFGH,18.230732748825044
+41,NUH(A),14.535773637975513
+41,SKH,7.587467541784186
+41,SGH,9.954984964939941
+41,TTSH,7.2662865233407725
+41,WH,17.014084071053418
+42,AH,11.727283911484788
+42,CGH,5.854070596721992
+42,KTPH,14.63609528211285
+42,NTFGH,17.873822399897524
+42,NUH(A),13.76976839569248
+42,SKH,9.003196153649094
+42,SGH,8.774273725818214
+42,TTSH,6.84810065628062
+42,WH,17.71188982342121
+43,AH,10.21246764457208
+43,CGH,7.413680737646176
+43,KTPH,14.613606302243465
+43,NTFGH,16.602834376522697
+43,NUH(A),12.2996093705281
+43,SKH,9.593357375034017
+43,SGH,7.201763025763898
+43,TTSH,5.65874453057387
+43,WH,17.300908710426167
+44,AH,12.44574271196231
+44,CGH,5.695781950505164
+44,KTPH,15.725211202560635
+44,NTFGH,18.84031434300463
+44,NUH(A),14.557382286847282
+44,SKH,9.910090813593166
+44,SGH,9.300718595824549
+44,TTSH,7.8457115397805826
+44,WH,18.8511571884434
+45,AH,13.69648233431911
+45,CGH,4.090211534396242
+45,KTPH,15.328926483728463
+45,NTFGH,19.719823569907245
+45,NUH(A),15.728224890196499
+45,SKH,9.069684486517806
+45,SGH,10.713758312415488
+45,TTSH,8.692637906906397
+45,WH,18.794949626369505
+46,AH,16.062244246694114
+46,CGH,2.2229983869912484
+46,KTPH,16.237414070322718
+46,NTFGH,21.89913581224273
+46,NUH(A),18.067876801080548
+46,SKH,9.475682964879146
+46,SGH,13.091272978426755
+46,TTSH,10.91299070661025
+46,WH,20.098028978140945
+47,AH,14.454358347896658
+47,CGH,2.841550510775984
+47,KTPH,13.593672983243122
+47,NTFGH,19.698166198792066
+47,NUH(A),16.29161945971899
+47,SKH,6.974136081834529
+47,SGH,11.887855759181289
+47,TTSH,8.899416786674598
+47,WH,17.420070411703975
+48,AH,17.568320131045585
+48,CGH,0.9725745535658832
+48,KTPH,16.24436994961488
+48,NTFGH,23.06066460372374
+48,NUH(A),19.500258855372476
+48,SKH,9.259473499892101
+48,SGH,14.730181083417298
+48,TTSH,12.194183173955281
+48,WH,20.388991673252
+49,AH,20.916843491640133
+49,CGH,3.6575845137794962
+49,KTPH,17.664198860652874
+49,NTFGH,26.039524446393173
+49,NUH(A),22.78004083424002
+49,SKH,10.641684380941149
+49,SGH,18.171962792393145
+49,TTSH,15.3775683247274
+49,WH,22.18324362717332
+50,AH,20.483655967751755
+50,CGH,3.7452922619809765
+50,KTPH,15.733984272428467
+50,NTFGH,25.022242551631056
+50,NUH(A),22.19495108556793
+50,SKH,8.814885073597564
+50,SGH,18.044001922739394
+50,TTSH,14.722948528800583
+50,WH,20.373239452250946
+51,AH,18.763334472851593
+51,CGH,3.7968178474825827
+51,KTPH,13.24493974379188
+51,NTFGH,22.831503649925576
+51,NUH(A),20.33352590690401
+51,SKH,6.31701369150525
+51,SGH,16.630787010582623
+51,TTSH,12.882900693993207
+51,WH,17.87348678689557
+52,AH,17.30089735941616
+52,CGH,1.4273062288602982
+52,KTPH,14.125631771968461
+52,NTFGH,22.09509304224233
+52,NUH(A),19.050412732202567
+52,SKH,7.0771639751901665
+52,SGH,14.844914664140246
+52,TTSH,11.589821980565546
+52,WH,18.449953729296272
+53,AH,11.778469000955328
+53,CGH,7.221898512364519
+53,KTPH,9.255720357133516
+53,NTFGH,15.617181076720177
+53,NUH(A),13.160325313255388
+53,SKH,4.052650801231793
+53,SGH,10.302003393742078
+53,TTSH,5.846099312266157
+53,WH,12.72638206876938
+54,AH,12.566664766809032
+54,CGH,7.879364941725487
+54,KTPH,7.945894080837205
+54,NTFGH,15.681570984494671
+54,NUH(A),13.751835014013551
+54,SKH,2.7346344731807743
+54,SGH,11.423540886471278
+54,TTSH,6.719264610231661
+54,WH,11.700014680703474
+55,AH,10.675641779030995
+55,CGH,9.514189058982009
+55,KTPH,7.591292371487087
+55,NTFGH,13.600480498384247
+55,NUH(A),11.735439035082736
+55,SKH,4.456868755043497
+55,SGH,9.919478596509393
+55,TTSH,5.00999314411971
+55,WH,10.59395438661635
+56,AH,10.304995875240557
+56,CGH,12.12162268467117
+56,KTPH,5.85815509860333
+56,NTFGH,11.663932711007948
+56,NUH(A),10.84682012673115
+56,SKH,5.816119305510309
+56,SGH,10.495389821498346
+56,TTSH,5.618153765393081
+56,WH,8.075554636978403
+57,AH,8.682075574230797
+57,CGH,12.833889685197974
+57,KTPH,7.151234693182067
+57,NTFGH,10.26194901837974
+57,NUH(A),9.184171539159562
+57,SKH,7.2968389183396445
+57,SGH,9.128119985222044
+57,TTSH,4.455868685973552
+57,WH,8.493690665509368
+58,AH,6.113458194850154
+58,CGH,18.307644830634914
+58,KTPH,11.105580274007178
+58,NTFGH,4.256200194150549
+58,NUH(A),4.985795010253281
+58,SKH,13.311384316263396
+58,SGH,8.918476938034646
+58,TTSH,7.114580758019321
+58,WH,9.440386194301851
+59,AH,6.520096224031303
+59,CGH,19.928806717657594
+59,KTPH,12.355335934532288
+59,NTFGH,2.5987189495497915
+59,NUH(A),4.843818030197921
+59,SKH,14.938505781852093
+59,SGH,9.750699784483356
+59,TTSH,8.58399807878385
+59,WH,10.12857152443068
+60,AH,8.237696234455687
+60,CGH,23.202834017361525
+60,KTPH,15.213444097878305
+60,NTFGH,0.8128621349672482
+60,NUH(A),5.997754422661494
+60,SKH,18.277987755799252
+60,SGH,11.8685793871632
+60,TTSH,11.668766264225226
+60,WH,12.232566261286607
+61,AH,10.376336730010554
+61,CGH,25.613651299663346
+61,KTPH,16.999080681151355
+61,NTFGH,3.124518027456409
+61,NUH(A),8.066215551360235
+61,SKH,20.519689891328696
+61,SGH,14.061375666819623
+61,TTSH,14.084402974448095
+61,WH,13.540609323668471
+62,AH,13.526501561144435
+62,CGH,29.623687144675657
+62,KTPH,21.13261104711087
+62,NTFGH,7.2944441557109085
+62,NUH(A),11.219160637899638
+62,SKH,24.75485900187055
+62,SGH,17.207705144909173
+62,TTSH,17.961153134056158
+62,WH,17.404708191088677
+63,AH,17.0396471147788
+63,CGH,32.95809735649303
+63,KTPH,23.590034120282642
+63,NTFGH,10.481866426801526
+63,NUH(A),14.729545397819647
+63,SKH,27.74638622481687
+63,SGH,20.72186370302477
+63,TTSH,21.35991354529291
+63,WH,19.47000115427414
+64,AH,12.823786025815888
+64,CGH,27.288181736881757
+64,KTPH,17.293917967247825
+64,NTFGH,5.066278630478217
+64,NUH(A),10.54913992610117
+64,SKH,21.59740393229287
+64,SGH,16.47027653227846
+64,TTSH,16.023213126977396
+64,WH,13.28266210417746
+65,AH,9.474181637378242
+65,CGH,21.99065058202352
+65,KTPH,12.233796613277928
+65,NTFGH,2.731111593209078
+65,NUH(A),7.650709412328876
+65,SKH,16.140087958645474
+65,SGH,12.71457583446692
+65,TTSH,11.131594914197274
+65,WH,8.922054325379209
+66,AH,9.515210031742491
+66,CGH,21.19041001692972
+66,KTPH,11.169347845642848
+66,NTFGH,3.590137444421152
+66,NUH(A),7.883526919308184
+66,SKH,15.160585092837168
+66,SGH,12.566405675371337
+66,TTSH,10.585494754374281
+66,WH,7.943545878927701
+67,AH,10.315327915964652
+67,CGH,20.480630491023334
+67,KTPH,9.635612667218547
+67,NTFGH,5.195337478875716
+67,NUH(A),8.942920112173939
+67,SKH,14.032030274208461
+67,SGH,13.062984052523145
+67,TTSH,10.46894499809298
+67,WH,6.325121783768024
+68,AH,12.493236599090777
+68,CGH,22.915265788448124
+68,KTPH,10.938484542856735
+68,NTFGH,5.990017700680202
+68,NUH(A),10.856472650166511
+68,SKH,16.131637863803665
+68,SGH,15.461136159652122
+68,TTSH,13.053159066730945
+68,WH,6.698815104386524
+69,AH,12.68553714918551
+69,CGH,25.132874038450797
+69,KTPH,13.921537979045253
+69,NTFGH,4.989836892436869
+69,NUH(A),10.6773353720464
+69,SKH,18.78647943438537
+69,SGH,16.05479777172136
+69,TTSH,14.524398845921011
+69,WH,9.705740498858212
+70,AH,16.37390197347869
+70,CGH,28.502277483407045
+70,KTPH,16.12075761145171
+70,NTFGH,8.525367226855984
+70,NUH(A),14.297981259170102
+70,SKH,21.720029615405473
+70,SGH,19.787793187092696
+70,TTSH,18.198476944438482
+70,WH,11.399589491667523
+71,AH,18.642697071744465
+71,CGH,27.851894154958746
+71,KTPH,13.767491876764552
+71,NTFGH,11.534515997239344
+71,NUH(A),16.902723924262535
+71,SKH,20.266645632855536
+71,SGH,21.63384965373072
+71,TTSH,18.972055055119764
+71,WH,8.853306888278254
+72,AH,15.203719711130896
+72,CGH,23.525336552280073
+72,KTPH,9.866300739534658
+72,NTFGH,9.153062418866124
+72,NUH(A),13.762854535941992
+72,SKH,16.051972316117087
+72,SGH,17.879123251406345
+72,TTSH,14.827380133014895
+72,WH,5.009595010882625
+73,AH,16.327715681654357
+73,CGH,21.06332515223008
+73,KTPH,6.22063893007697
+73,NTFGH,12.015735254562298
+73,NUH(A),15.421996484548565
+73,SKH,13.055175255284366
+73,SGH,18.287057147739176
+73,TTSH,14.316434824934294
+73,WH,1.6011979335912736
+75,AH,18.10684556604501
+75,CGH,18.624981884062038
+75,KTPH,3.4915404421953817
+75,NTFGH,15.51477809466761
+75,NUH(A),17.745579964817143
+75,SKH,10.320865336773988
+75,SGH,19.248540366551303
+75,TTSH,14.61161364628845
+75,WH,4.164623429972863
+76,AH,15.999956606246855
+76,CGH,15.818202973502729
+76,KTPH,0.5650033284674271
+76,NTFGH,14.599142668108751
+76,NUH(A),15.93707697436667
+76,SKH,7.546777218811115
+76,SGH,16.771336730455964
+76,TTSH,11.987609493190899
+76,WH,4.685668707333096
+77,AH,12.880903634784968
+77,CGH,16.437729431870412
+77,KTPH,3.475576632039012
+77,NTFGH,10.956060770114032
+77,NUH(A),12.552826885720759
+77,SKH,8.786759924811747
+77,SGH,14.188869458695795
+77,TTSH,9.800482653514898
+77,WH,3.2375964936456083
+78,AH,11.872501046891115
+78,CGH,14.498431136303724
+78,KTPH,3.70714578744113
+78,NTFGH,11.272604013541354
+78,NUH(A),11.891243016731096
+78,SKH,7.120401320995544
+78,SGH,12.74368050623414
+78,TTSH,8.115438523853166
+78,WH,5.248257931165363
+79,AH,14.317221953697757
+79,CGH,10.263964286736037
+79,KTPH,5.0477152694601175
+79,NTFGH,15.823668389970683
+79,NUH(A),15.06909835466531
+79,SKH,2.1343988263595883
+79,SGH,13.855640061876581
+79,TTSH,8.908554336299295
+79,WH,9.435340327056016
+80,AH,12.682833723539536
+80,CGH,10.492839504667305
+80,KTPH,5.2789912507951335
+80,NTFGH,14.33865796870003
+80,NUH(A),13.426959999249018
+80,SKH,3.1873913503533506
+80,SGH,12.333415998967281
+80,TTSH,7.365902745709419
+80,WH,9.015024236021045
+81,AH,22.378625476791715
+81,CGH,5.141628345884503
+81,KTPH,18.226071083816244
+81,NTFGH,27.285280243357082
+81,NUH(A),24.197008028491158
+81,SKH,11.31760925116032
+81,SGH,19.704743107923747
+81,TTSH,16.75904860910627
+81,WH,22.876189586051815
+82,AH,17.244685741006812
+82,CGH,8.436908507175632
+82,KTPH,7.827764998536625
+82,NTFGH,19.44385810073033
+82,NUH(A),18.26748322586448
+82,SKH,2.1177054275072207
+82,SGH,16.177927958384892
+82,TTSH,11.465302160197332
+82,WH,12.638801068208492
+88,AH,8.125408452436337
+88,CGH,10.778473960271688
+88,KTPH,9.152401994661563
+88,NTFGH,11.753804903223784
+88,NUH(A),9.285614147031714
+88,SKH,7.00724745125318
+88,SGH,7.49222014191358
+88,TTSH,2.52269232654971
+88,WH,11.119553629432826
+91,AH,22.734249358097422
+91,CGH,5.517354458742237
+91,KTPH,18.331367314861563
+91,NTFGH,27.573635368316104
+91,NUH(A),24.537938121766626
+91,SKH,11.465764330529359
+91,SGH,20.084927217339622
+91,TTSH,17.091532816783904
+91,WH,23.012336382362626

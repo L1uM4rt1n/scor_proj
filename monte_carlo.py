@@ -6,7 +6,7 @@ import os
 import matplotlib.pyplot as plt
 
 class MonteCarloCapacitySimulator:
-    def __init__(self, csv_path="data/bor_2324_data.csv", hospital_capacities=None, time_steps=12, lambda_rate=0.8, cumulative_limit=0.045, save_path="models/hospital_capacity_simulations.joblib", csv_save_path="models/hospital_capacity_simulations"):
+    def __init__(self, csv_path="data/bor_2324_data.csv", hospital_capacities=None, time_steps=12, lambda_rate=0.8, cumulative_limit=0.045, save_path="models/hospital_capacity_simulations.joblib", csv_save_path="models"):
         """
         Initialize the Monte Carlo capacity simulator with hospital data from bor_2324_data.csv.
 
@@ -168,7 +168,7 @@ class MonteCarloCapacitySimulator:
         """Save simulation data to a CSV format, with each hospital in a separate file."""
         for hospital, data in simulation_data.items():
             df = pd.DataFrame(data)
-            csv_file_path = os.path.join(self.csv_save_path, f"models/{hospital}_capacity_simulations.csv")
+            csv_file_path = os.path.join(self.csv_save_path, f"{hospital}_capacity_simulations.csv")
             os.makedirs(os.path.dirname(csv_file_path), exist_ok=True)
             df.to_csv(csv_file_path, index_label="Time Step")
             print(f"Simulation for {hospital} saved to {csv_file_path}")
@@ -229,7 +229,7 @@ if __name__ == "__main__":
         csv_path="data/bor_2324_data.csv",
         hospital_capacities=actual_capacities,
         save_path="models/hospital_capacity_simulations.joblib",
-        csv_save_path="models/hospital_capacity_simulations.csv"
+        csv_save_path="models"
     )
 
     # Run the simulation and save in both Joblib and CSV formats
