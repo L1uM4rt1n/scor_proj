@@ -60,8 +60,6 @@ class HospitalDistanceCalculator:
         
         # Load distances from CSV
         distances_df = pd.read_csv(self.output_csv)
-        print(distances_df.head())
-        print(distances_df.info())
         
         # Fetch distances for the specific district
         district_distances = distances_df[distances_df['postal_district'] == sector]
@@ -75,7 +73,6 @@ if __name__ == "__main__":
     # Initialize the HospitalDistanceCalculator
     calculator = HospitalDistanceCalculator(output_csv=output_csv, input_midpoint_csv='data/postal_midpoints.csv')
     calculator.get_midpoints('data/postal_midpoints.csv')
-    print(calculator.midpoints)
     
     # Calculate and save distances to CSV
     calculator.calculate_distances()

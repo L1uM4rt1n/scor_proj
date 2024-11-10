@@ -3,8 +3,10 @@ import numpy as np
 import gurobipy as gp
 from gurobipy import GRB
 import pandas as pd
+import csv
+from datetime import datetime
+import multiprocessing
 
-# Import classes from provided utility files
 from euclidean import HospitalDistanceCalculator
 from monte_carlo import MonteCarloCapacitySimulator
 from regression_model import LogisticRegressionUtility
@@ -22,104 +24,185 @@ actual_capacities = {
     "WH": 1000,
 }
 
-# Load utility objects
-distance_calculator = HospitalDistanceCalculator(output_csv="models/distances_to_hospitals.csv")
+distance_calculator = HospitalDistanceCalculator()
 monte_carlo_simulator = MonteCarloCapacitySimulator(csv_path="data/bor_2324_data.csv")
 logistic_util = LogisticRegressionUtility()
 
-# Load pre-trained logistic regression model and scaler
 logistic_util.load_model()
-
-# Load pre-simulated hospital capacities from joblib
 hospital_capacity_simulation = monte_carlo_simulator.load_simulation()
 
 def initialize_percentage_capacity(time_step):
-    """Initialize hospital capacities as percentages at the start of each time step."""
-    initial_percentages = {hospital: monte_carlo_simulator.check_capacity_at_time(
-        hospital_capacity_simulation, hospital, time_step) for hospital in hospital_capacity_simulation.keys()}
+    initial_percentages = {
+        hospital: monte_carlo_simulator.check_capacity_at_time(
+            hospital_capacity_simulation, hospital, time_step
+        ) for hospital in hospital_capacity_simulation.keys()
+    }
     return initial_percentages
 
 def update_percentage_capacity(current_percentage_capacity, assigned_hospital):
-    """Update the capacity percentage for the assigned hospital after making an assignment."""
-    # Convert percentage to absolute capacity for the assigned hospital
     absolute_capacity = current_percentage_capacity[assigned_hospital] * actual_capacities[assigned_hospital]
-    absolute_capacity -= 1  # Decrement by 1 bed
+    absolute_capacity -= 1
     current_percentage_capacity[assigned_hospital] = max(0, absolute_capacity / actual_capacities[assigned_hospital])
     return current_percentage_capacity
 
+# Cost functions with scaling factors for balanced optimization
+NON_EMERGENCY_WEIGHT = 200
+DISTANCE_WEIGHT = 1
+CAPACITY_WEIGHT = 50
+
+def distance_weight(distance):
+    return DISTANCE_WEIGHT * distance
+
+def capacity_weight(percentage_capacity):
+    return CAPACITY_WEIGHT * (1 - percentage_capacity)
+
 def real_time_multi_stage_optimization(emergency_data, p_threshold, max_distance, time_horizon=12):
-    # Initialize the Gurobi model
     model = gp.Model("RealTimeMultiStageOptimization")
 
-    # First- and second-stage decision variables
+    # Performance parameters for Gurobi
+    num_cores = multiprocessing.cpu_count()
+    model.setParam('Threads', num_cores)
+    model.setParam('MIPFocus', 1)
+    model.setParam('Presolve', 2)
+    model.setParam('Heuristics', 0.5)
+    model.setParam('TimeLimit', 600)
+
     u_i1 = {}
     u_ij2 = {}
+    p_real_emergency_dict = {}  # Dictionary to store precomputed emergency probabilities
 
-    # Loop through each time step for multi-stage optimization
-    for t in range(time_horizon):
-        current_percentage_capacity = initialize_percentage_capacity(t)
+    # Iterate over actual time intervals (0, 2, ..., 22)
+    for t in range(0, time_horizon * 2, 2):
+        time_step_index = t // 2
+        current_percentage_capacity = initialize_percentage_capacity(time_step_index)
 
-        # Create variables and constraints dynamically for each call
-        for call in emergency_data.itertuples():
-            p_real_emergency = logistic_util.predict_probability(call.rssi, call.hour)
-            u_i1[call.call_id] = model.addVar(vtype=GRB.BINARY, name=f"u_i1_{call.call_id}_t{t}")
+        for call in emergency_data:
+            iot_lora_id = call['iot_lora_id']
+            call_index = call['call_index']
+            two_hour = call['two_hour']
+            post_code = call['post_code']
+            rssi = call['rssi']
+            call_id = (iot_lora_id, call_index)
+
+            # Calculate and store the probability of an emergency
+            p_real_emergency = logistic_util.predict_probability(rssi, two_hour)
+            p_real_emergency_dict[call_id] = p_real_emergency  # Store in dictionary for reuse
+
+            # Define decision variables
+            u_i1[call_id] = model.addVar(vtype=GRB.BINARY, name=f"u_i1_{iot_lora_id}_{call_index}_t{time_step_index}")
 
             for hospital in hospital_capacity_simulation.keys():
-                u_ij2[(call.call_id, hospital, t)] = model.addVar(vtype=GRB.BINARY, name=f"u_ij2_{call.call_id}_{hospital}_t{t}")
-                
+                u_ij2[(call_id, hospital, time_step_index)] = model.addVar(
+                    vtype=GRB.BINARY, name=f"u_ij2_{iot_lora_id}_{call_index}_{hospital}_t{time_step_index}")
+
                 # Distance constraint
-                distances = distance_calculator.get_distances_from_postal_code(call.postal_code)
+                distances = distance_calculator.get_distances_from_postal_code(post_code)
                 distance_row = distances[distances['hospital'] == hospital]
                 if not distance_row.empty and distance_row['distance_km'].values[0] > max_distance:
-                    model.addConstr(u_ij2[(call.call_id, hospital, t)] == 0, f"MaxDistance_{call.call_id}_{hospital}_t{t}")
+                    model.addConstr(u_ij2[(call_id, hospital, time_step_index)] == 0,
+                                    f"MaxDistance_{iot_lora_id}_{call_index}_{hospital}_t{time_step_index}")
 
-            # Capacity constraints
+            # Capacity constraint based on absolute values
             for hospital in hospital_capacity_simulation.keys():
                 absolute_capacity = current_percentage_capacity[hospital] * actual_capacities[hospital]
                 model.addConstr(
-                    gp.quicksum(u_ij2[(call.call_id, hospital, t)] for call in emergency_data.itertuples()) <= absolute_capacity,
-                    f"Capacity_{hospital}_t{t}"
+                    gp.quicksum(u_ij2[(call_id, hospital, time_step_index)]
+                                for call in emergency_data if call['two_hour'] == two_hour) <= absolute_capacity,
+                    f"Capacity_{hospital}_t{time_step_index}"
                 )
 
             # Single assignment per emergency constraint
             model.addConstr(
-                gp.quicksum(u_ij2[(call.call_id, hospital, t)] for hospital in hospital_capacity_simulation.keys()) == u_i1[call.call_id],
-                f"SingleAssignment_{call.call_id}_t{t}"
+                gp.quicksum(u_ij2[(call_id, hospital, time_step_index)]
+                            for hospital in hospital_capacity_simulation.keys()) == u_i1[call_id],
+                f"SingleAssignment_{iot_lora_id}_{call_index}_t{time_step_index}"
             )
-
-            # Update capacity within the same time step
-            for hospital in hospital_capacity_simulation.keys():
-                for call in emergency_data.itertuples():
-                    if u_ij2[(call.call_id, hospital, t)].x > 0.5:
-                        current_percentage_capacity = update_percentage_capacity(current_percentage_capacity, hospital)
 
     # Objective function
     objective_terms = []
-    for t in range(time_horizon):
-        for call in emergency_data.itertuples():
-            p_real_emergency = logistic_util.predict_probability(call.rssi, call.hour)
-            non_emergency_cost = (1 - p_real_emergency) * u_i1[call.call_id]
+    for t in range(0, time_horizon * 2, 2):
+        time_step_index = t // 2
+        for call in emergency_data:
+            iot_lora_id = call['iot_lora_id']
+            call_index = call['call_index']
+            call_id = (iot_lora_id, call_index)
+            two_hour = call['two_hour']
+            rssi = call['rssi']
+
+            # Use the precomputed probability of an emergency
+            p_real_emergency = p_real_emergency_dict[call_id]
+            non_emergency_cost = (1 - p_real_emergency) * u_i1[call_id] * NON_EMERGENCY_WEIGHT
             objective_terms.append(non_emergency_cost)
 
             for hospital in hospital_capacity_simulation.keys():
-                distances = distance_calculator.get_distances_from_postal_code(call.postal_code)
+                post_code = call['post_code']
+                distances = distance_calculator.get_distances_from_postal_code(post_code)
                 distance_row = distances[distances['hospital'] == hospital]
                 if not distance_row.empty:
                     distance_km = distance_row['distance_km'].values[0]
-                    distance_cost = distance_weight(distance_km) * u_ij2[(call.call_id, hospital, t)]
-                    capacity_cost = capacity_weight(current_percentage_capacity[hospital]) * u_ij2[(call.call_id, hospital, t)]
+                    distance_cost = distance_weight(distance_km) * u_ij2[(call_id, hospital, time_step_index)]
+                    capacity_cost = capacity_weight(current_percentage_capacity[hospital]) * u_ij2[(call_id, hospital, time_step_index)]
                     objective_terms.append(distance_cost + capacity_cost)
 
     model.setObjective(gp.quicksum(objective_terms), GRB.MINIMIZE)
     model.optimize()
 
-    assignments = {}
-    for call in emergency_data.itertuples():
-        for hospital in hospital_capacity_simulation.keys():
-            for t in range(time_horizon):
-                if u_ij2[(call.call_id, hospital, t)].x > 0.5:
-                    assignments[(call.call_id, t)] = hospital
+    if model.status == GRB.OPTIMAL:
+        assignments = {}
+        for call in emergency_data:
+            iot_lora_id = call['iot_lora_id']
+            call_index = call['call_index']
+            call_id = (iot_lora_id, call_index)
+            for hospital in hospital_capacity_simulation.keys():
+                for t in range(0, time_horizon * 2, 2):
+                    time_step_index = t // 2
+                    if u_ij2[(call_id, hospital, time_step_index)].x > 0.5:
+                        assignments[(call_id, t)] = hospital
+        return assignments, model.objVal
+    else:
+        print("No optimal solution found.")
+        return None, None
 
-    total_cost = model.objVal
-    return assignments, total_cost
+
+
+if __name__ == "__main__":
+    import csv
+    from datetime import datetime
+
+    # Initialize an empty list to store each call as a dictionary
+    emergency_data = []
+
+    # Load emergency data from CSV file, limiting to the first 1000 entries
+    with open("data/pab_calls_with_recording_20241109.csv", mode='r') as file:
+        reader = csv.DictReader(file)
+        for idx, row in enumerate(reader):
+            if idx >= 10:  # Stop reading after 1000 entries
+                break
+            
+            # Parse and process `arrtime` to get the hour, rounding down to the nearest even hour
+            arrtime = datetime.strptime(row['arrtime'], "%d/%m/%Y %H:%M")
+            two_hour = arrtime.hour - (arrtime.hour % 2)
+
+            # Append each row as a separate entry in the list with a unique call index
+            emergency_data.append({
+                'iot_lora_id': int(row['iot_lora_id']),
+                'call_index': idx,
+                'two_hour': two_hour,
+                'post_code': row['post_code'],
+                'rssi': float(row['rssi']),
+                'district': row['district'],
+                'recording': row['recording']
+            })
+
+    # Run the optimization model with the list of calls
+    p_threshold = 0.5
+    max_distance = 10
+    time_horizon = 12
+
+    assignments, total_cost = real_time_multi_stage_optimization(emergency_data, p_threshold, max_distance, time_horizon)
+
+    if assignments is not None:
+        print("Assignments:", assignments)
+        print("Total cost:", total_cost)
+
 

@@ -19,8 +19,8 @@ class LogisticRegressionUtility:
         # Prepare features based on new conditions
         df["arrtime"] = pd.to_datetime(df["arrtime"])
         df["hour"] = df["arrtime"].dt.hour
-        df["2_hour_interval"] = (df["hour"] // 2) * 2
-        X = df[["rssi", "hour", "2_hour_interval"]]
+        df["two_hour"] = (df["hour"] // 2) * 2
+        X = df[["rssi", "two_hour"]]
         y = df[target_column]
         
         # Train-test split
@@ -85,17 +85,18 @@ class LogisticRegressionUtility:
         else:
             raise FileNotFoundError("Pre-trained model or scaler not found. Train the model first.")
 
-    def predict_probability(self, rssi, hour):
-        """Predicts the probability of an emergency based on new conditions."""
+    def predict_probability(self, rssi, two_hour):
+        """Predicts the probability of an emergency based on rssi and two_hour values."""
         if self.model is None or self.scaler is None:
             raise ValueError("Model and scaler must be loaded or trained before making predictions.")
         
-        # Calculate the 2-hour interval for consistency with training data
-        time_interval = (hour // 2) * 2
-        X = [[rssi, hour, time_interval]]
-        X_scaled = self.scaler.transform(X)
+        # Create a DataFrame from the individual inputs to match the expected input format
+        input_df = pd.DataFrame([[rssi, two_hour]], columns=["rssi", "two_hour"])
         
-        # Predict and return the probability of a genuine emergency
+        # Scale the input DataFrame
+        X_scaled = self.scaler.transform(input_df)
+        
+        # Predict and return the probability of a genuine emergency for this single input
         return self.model.predict_proba(X_scaled)[0][1]
 
 if __name__ == "__main__":
