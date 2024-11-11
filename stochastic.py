@@ -69,10 +69,9 @@ def real_time_multi_stage_optimization(emergency_data, max_distance, time_horizo
 
     u_i1 = {}
     u_ij2 = {}
-    p_real_emergency_dict = {}  # Dictionary to store precomputed emergency probabilities
+    p_real_emergency_dict = {}
     M = 1  # Big-M constant (adjustable if needed)
 
-    # Iterate over actual time intervals (0, 2, ..., 22)
     for t in range(0, time_horizon * 2, 2):
         time_step_index = t // 2
         current_percentage_capacity = initialize_percentage_capacity(time_step_index)
@@ -86,14 +85,11 @@ def real_time_multi_stage_optimization(emergency_data, max_distance, time_horizo
             call_id = (iot_lora_id, call_index)
             recording = int(call['recording'])
 
-            # Calculate and store the probability of an emergency only if the incident's `two_hour` matches `t`
             if two_hour == t:
                 p_real_emergency_dict[call_id] = recording
 
-            # Define decision variable for emergency assignment
             u_i1[call_id] = model.addVar(vtype=GRB.BINARY, name=f"u_i1_{iot_lora_id}_{call_index}_t{time_step_index}")
 
-                        # Big-M constraint: if p_real_emergency > 0.5, enforce u_i1 = 1
             if call_id in p_real_emergency_dict:
                 p_real_emergency = p_real_emergency_dict[call_id]
                 model.addConstr(u_i1[call_id] * M >= p_real_emergency - 0.5, name=f"EmergencyAssign_{call_id}")
@@ -102,7 +98,6 @@ def real_time_multi_stage_optimization(emergency_data, max_distance, time_horizo
                 u_ij2[(call_id, hospital, time_step_index)] = model.addVar(
                     vtype=GRB.BINARY, name=f"u_ij2_{iot_lora_id}_{call_index}_{hospital}_t{time_step_index}")
 
-                # Distance constraint
                 distances = distance_calculator.get_distances_from_postal_code(post_code)
                 distance_row = distances[distances['hospital'] == hospital]
                 if not distance_row.empty:
@@ -111,23 +106,21 @@ def real_time_multi_stage_optimization(emergency_data, max_distance, time_horizo
                         model.addConstr(u_ij2[(call_id, hospital, time_step_index)] == 0,
                                         f"MaxDistance_{iot_lora_id}_{call_index}_{hospital}_t{time_step_index}")
 
-            # Capacity constraint based on absolute values
             for hospital in hospital_capacity_simulation.keys():
                 absolute_capacity = current_percentage_capacity[hospital] * actual_capacities[hospital]
+                available_capacity = actual_capacities[hospital] - absolute_capacity
                 model.addConstr(
                     gp.quicksum(u_ij2[(call_id, hospital, time_step_index)]
-                                for call in emergency_data if call['two_hour'] == two_hour) <= absolute_capacity,
+                                for call in emergency_data if call['two_hour'] == two_hour) <= available_capacity,
                     f"Capacity_{hospital}_t{time_step_index}"
                 )
 
-            # Enforce that if `u_i1 = 1`, exactly one hospital must be assigned
             model.addConstr(
                 gp.quicksum(u_ij2[(call_id, hospital, time_step_index)]
                             for hospital in hospital_capacity_simulation.keys()) == u_i1[call_id],
                 f"SingleAssignment_{iot_lora_id}_{call_index}_t{time_step_index}"
             )
 
-    # Objective function
     objective_terms = [] 
     for t in range(0, time_horizon * 2, 2):
         time_step_index = t // 2
@@ -137,27 +130,20 @@ def real_time_multi_stage_optimization(emergency_data, max_distance, time_horizo
             call_id = (iot_lora_id, call_index)
             two_hour = call['two_hour']
 
-            # Only evaluate this call if it occurred at the current time step
             if two_hour != t:
                 continue
 
-            # Use the precomputed probability of an emergency if available
             p_real_emergency = p_real_emergency_dict.get(call_id, 0)
             non_emergency_cost = (1 - p_real_emergency) * u_i1[call_id] * NON_EMERGENCY_WEIGHT
-            print(call_id, p_real_emergency, t)
             objective_terms.append(non_emergency_cost)
 
             post_area = call['post_area']
             distances = distance_calculator.get_distances_from_postal_code(post_area)
-            print(f"ui1 probability: {u_i1[call_id]}")
-            print(f"postarea: {post_area}")
-            print(distances)
             for hospital in hospital_capacity_simulation.keys():
                 distance_row = distances[distances['hospital'] == hospital]
                 if not distance_row.empty:
                     distance_km = distance_row['distance_km'].values[0]
                     distance_cost = distance_weight(distance_km) * u_ij2[(call_id, hospital, time_step_index)]
-                    print(f"Hospital: {hospital}: Occupancy {current_percentage_capacity[hospital]}")
                     capacity_cost = capacity_weight(current_percentage_capacity[hospital]) * u_ij2[(call_id, hospital, time_step_index)]
                     objective_terms.append(distance_cost + capacity_cost)
 
@@ -170,24 +156,32 @@ def real_time_multi_stage_optimization(emergency_data, max_distance, time_horizo
             iot_lora_id = call['iot_lora_id']
             call_index = call['call_index']
             call_id = (iot_lora_id, call_index)
-            two_hour = call['two_hour']  # Retrieve the two-hour timing of the call
+            two_hour = call['two_hour']
 
             for hospital in hospital_capacity_simulation.keys():
                 for t in range(0, time_horizon * 2, 2):
                     time_step_index = t // 2
 
-                    # Only make an assignment if the call's two-hour timing matches the current time step `t`
                     if two_hour == t and u_ij2[(call_id, hospital, time_step_index)].x > 0.5:
-                        # Save the assignment result along with the precomputed emergency probability
                         assignments[(call_id, t)] = (hospital, p_real_emergency_dict.get(call_id, 0))
-
-                        # Transition function
+                        
+                        print(f"Case {call_id} in district {post_area} assigned to hospital {hospital}")
+                        print("Distances from district to hospitals:")
+                        for h in hospital_capacity_simulation.keys():
+                            distance_row = distances[distances['hospital'] == h]
+                            if not distance_row.empty:
+                                print(f"{h}: {distance_row['distance_km'].values[0]} km")
+                        print("Current hospital occupancies:")
+                        for h in hospital_capacity_simulation.keys():
+                            print(f"{h}: {current_percentage_capacity[h] * 100:.2f}% occupancy")
+                        
                         current_percentage_capacity = update_percentage_capacity(current_percentage_capacity, hospital)
                         
         return assignments, model.objVal
     else:
         print("No optimal solution found.")
         return None, None
+
 
 
 
