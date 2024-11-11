@@ -9,9 +9,12 @@ import multiprocessing
 
 from euclidean import HospitalDistanceCalculator
 from monte_carlo import MonteCarloCapacitySimulator
-from regression_model import LogisticRegressionUtility
 
-# Define actual hospital bed capacities
+distance_calculator = HospitalDistanceCalculator()
+monte_carlo_simulator = MonteCarloCapacitySimulator(csv_path="data/bor_2324_data.csv")
+
+hospital_capacity_simulation = monte_carlo_simulator.load_simulation()
+
 actual_capacities = {
     "AH": 326,
     "CGH": 1054,
@@ -24,13 +27,6 @@ actual_capacities = {
     "WH": 1000,
 }
 
-distance_calculator = HospitalDistanceCalculator()
-monte_carlo_simulator = MonteCarloCapacitySimulator(csv_path="data/bor_2324_data.csv")
-logistic_util = LogisticRegressionUtility()
-
-logistic_util.load_model()
-hospital_capacity_simulation = monte_carlo_simulator.load_simulation()
-
 def initialize_percentage_capacity(time_step):
     initial_percentages = {
         hospital: monte_carlo_simulator.check_capacity_at_time(
@@ -40,23 +36,27 @@ def initialize_percentage_capacity(time_step):
     return initial_percentages
 
 def update_percentage_capacity(current_percentage_capacity, assigned_hospital):
-    absolute_capacity = current_percentage_capacity[assigned_hospital] * actual_capacities[assigned_hospital]
-    absolute_capacity -= 1
-    current_percentage_capacity[assigned_hospital] = max(0, absolute_capacity / actual_capacities[assigned_hospital])
+
+    # Define actual hospital bed capacities
+    print(f"Old occupancy {assigned_hospital}: {current_percentage_capacity[assigned_hospital]}")
+    absolute_occupancy = current_percentage_capacity[assigned_hospital] * actual_capacities[assigned_hospital]
+    absolute_occupancy += 1
+    current_percentage_capacity[assigned_hospital] = min(1, absolute_occupancy / actual_capacities[assigned_hospital])
+    print(f"New occupancy {assigned_hospital}: {current_percentage_capacity[assigned_hospital]}")
     return current_percentage_capacity
 
 # Cost functions with scaling factors for balanced optimization
-NON_EMERGENCY_WEIGHT = 10
-DISTANCE_WEIGHT = 1
+NON_EMERGENCY_WEIGHT = 200
+DISTANCE_WEIGHT = 2
 CAPACITY_WEIGHT = 50
 
 def distance_weight(distance):
-    return DISTANCE_WEIGHT * distance
+    return DISTANCE_WEIGHT * (distance ** 2)
 
 def capacity_weight(percentage_capacity):
-    return CAPACITY_WEIGHT * (1 - percentage_capacity)
+    return CAPACITY_WEIGHT * (percentage_capacity ** 2)
 
-def real_time_multi_stage_optimization(emergency_data, p_threshold, max_distance, time_horizon=12):
+def real_time_multi_stage_optimization(emergency_data, max_distance, time_horizon=12):
     model = gp.Model("RealTimeMultiStageOptimization")
 
     # Performance parameters for Gurobi
@@ -84,11 +84,11 @@ def real_time_multi_stage_optimization(emergency_data, p_threshold, max_distance
             post_code = call['post_code']
             rssi = call['rssi']
             call_id = (iot_lora_id, call_index)
+            recording = int(call['recording'])
 
             # Calculate and store the probability of an emergency only if the incident's `two_hour` matches `t`
             if two_hour == t:
-                p_real_emergency = logistic_util.predict_probability(rssi, two_hour)
-                p_real_emergency_dict[call_id] = p_real_emergency  # Store in dictionary for reuse
+                p_real_emergency_dict[call_id] = recording
 
             # Define decision variable for emergency assignment
             u_i1[call_id] = model.addVar(vtype=GRB.BINARY, name=f"u_i1_{iot_lora_id}_{call_index}_t{time_step_index}")
@@ -147,13 +147,17 @@ def real_time_multi_stage_optimization(emergency_data, p_threshold, max_distance
             print(call_id, p_real_emergency, t)
             objective_terms.append(non_emergency_cost)
 
+            post_area = call['post_area']
+            distances = distance_calculator.get_distances_from_postal_code(post_area)
+            print(f"ui1 probability: {u_i1[call_id]}")
+            print(f"postarea: {post_area}")
+            print(distances)
             for hospital in hospital_capacity_simulation.keys():
-                post_area = call['post_area']
-                distances = distance_calculator.get_distances_from_postal_code(post_area)
                 distance_row = distances[distances['hospital'] == hospital]
                 if not distance_row.empty:
                     distance_km = distance_row['distance_km'].values[0]
                     distance_cost = distance_weight(distance_km) * u_ij2[(call_id, hospital, time_step_index)]
+                    print(f"Hospital: {hospital}: Occupancy {current_percentage_capacity[hospital]}")
                     capacity_cost = capacity_weight(current_percentage_capacity[hospital]) * u_ij2[(call_id, hospital, time_step_index)]
                     objective_terms.append(distance_cost + capacity_cost)
 
@@ -176,6 +180,9 @@ def real_time_multi_stage_optimization(emergency_data, p_threshold, max_distance
                     if two_hour == t and u_ij2[(call_id, hospital, time_step_index)].x > 0.5:
                         # Save the assignment result along with the precomputed emergency probability
                         assignments[(call_id, t)] = (hospital, p_real_emergency_dict.get(call_id, 0))
+
+                        # Transition function
+                        current_percentage_capacity = update_percentage_capacity(current_percentage_capacity, hospital)
                         
         return assignments, model.objVal
     else:
@@ -186,18 +193,19 @@ def real_time_multi_stage_optimization(emergency_data, p_threshold, max_distance
 
 if __name__ == "__main__":
     import csv
+    import random
     from datetime import datetime
 
     # Initialize an empty list to store each call as a dictionary
     emergency_data = []
 
-    # Load emergency data from CSV file, limiting to the first 1000 entries
-    with open("data/sample-calls.csv", mode='r') as file:
+    # Load emergency data from CSV file
+    with open("data/final_calls_data.csv", mode='r') as file:
         reader = csv.DictReader(file)
-        for idx, row in enumerate(reader):
-            if idx >= 10:  # Stop reading after 1000 entries
-                break
-            
+        rows = list(reader)  # Read all rows into a list
+        random.shuffle(rows)  # Shuffle the rows to randomize
+
+        for idx, row in enumerate(rows[:10]):  # Get the first 10 after shuffling
             # Parse and process `arrtime` to get the hour, rounding down to the nearest even hour
             arrtime = datetime.strptime(row['arrtime'], "%Y-%m-%d %H:%M:%S")
             two_hour = arrtime.hour - (arrtime.hour % 2)
@@ -210,19 +218,20 @@ if __name__ == "__main__":
                 'post_code': row['post_code'],
                 'rssi': float(row['rssi']),
                 'post_area': row['district'],
-                #'recording': row['recording']
+                'recording': row['recording']
             })
-    
+
     print(emergency_data)
+
     # Run the optimization model with the list of calls
-    p_threshold = 0.5
     max_distance = 20
     time_horizon = 12
 
-    assignments, total_cost = real_time_multi_stage_optimization(emergency_data, p_threshold, max_distance, time_horizon)
+    assignments, total_cost = real_time_multi_stage_optimization(emergency_data, max_distance, time_horizon)
 
     if assignments is not None:
         print("Assignments:", assignments)
         print("Total cost:", total_cost)
+
 
 
