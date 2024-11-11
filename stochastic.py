@@ -47,8 +47,8 @@ def update_percentage_capacity(current_percentage_capacity, assigned_hospital):
 
 # Cost functions with scaling factors for balanced optimization
 NON_EMERGENCY_WEIGHT = 200
-DISTANCE_WEIGHT = 2
-CAPACITY_WEIGHT = 50
+DISTANCE_WEIGHT = 9125
+CAPACITY_WEIGHT = 63.5
 
 def distance_weight(distance):
     return DISTANCE_WEIGHT * (distance ** 2)
@@ -199,7 +199,7 @@ if __name__ == "__main__":
         rows = list(reader)  # Read all rows into a list
         random.shuffle(rows)  # Shuffle the rows to randomize
 
-        for idx, row in enumerate(rows[:10]):  # Get the first 10 after shuffling
+        for idx, row in enumerate(rows[:7]):  # Get the first 10 after shuffling
             # Parse and process `arrtime` to get the hour, rounding down to the nearest even hour
             arrtime = datetime.strptime(row['arrtime'], "%Y-%m-%d %H:%M:%S")
             two_hour = arrtime.hour - (arrtime.hour % 2)
@@ -218,7 +218,7 @@ if __name__ == "__main__":
     print(emergency_data)
 
     # Run the optimization model with the list of calls
-    max_distance = 20
+    max_distance = 10
     time_horizon = 12
 
     assignments, total_cost = real_time_multi_stage_optimization(emergency_data, max_distance, time_horizon)
